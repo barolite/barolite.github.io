@@ -11,8 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <button id="home" onclick="location.href='index.html'">Home</button>    
+    <div class="header">
+        <h2 id="playingorno">Loading...<h2>
+        <h2 id="now-playing-text"></h2>    
     <h1>Welcome</h1>
     
+    <div class="buttons">
+        <button onclick="location.href='dog.html'">About</button> 
+        <button>Projects</button>
+    </div>
+
 
     <div class="iconbar">
         <a href="https://x.com/barolite">    
@@ -29,5 +38,40 @@
         </a>
     </div>
     <p>Work in progress.</p>
+
+    <script>
+
+        const nowPlayingText = document.getElementById('now-playing-text');
+        const playingorno = document.getElementById('playingorno');
+
+        const API_URL = 'https://candid-sunshine-90af46.netlify.app/.netlify/functions/nowplaying';
+
+
+        async function fetchNowPlaying() {
+            try {
+                const response = await fetch(API_URL);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                const track = data.recenttracks.track[0]; 
+
+                if (track['@attr'] && track['@attr'].nowplaying === 'true') {
+                    playingorno.textContent = 'Now playing:';
+                    nowPlayingText.textContent = `${track.artist['#text']} - ${track.name}`;
+                } else {
+                    playingorno.textContent = 'Last played:';
+                    nowPlayingText.textContent = `${track.artist['#text']} - ${track.name}`;
+                }
+            } catch (error) {
+                console.error('Error fetching Last.fm data:', error);
+                nowPlayingText.textContent = 'Error loading music info';
+            }
+        }
+
+        fetchNowPlaying(); 
+    </script>
 </body>
 </html>

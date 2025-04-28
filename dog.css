@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(rgb(30,30,46), rgb(0,0,0));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+html {
+    --s: 52px; /* control the size*/
+    --c1: #11111b;
+    --c2: #1e1e2e;
+    --c3: #181825;
+    
+    background:
+      repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
+       calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
+      repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
+    background-size: var(--s) calc(var(--s)*tan(30deg));
+}
+
+  img {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #ccd6f4;
+    border-width: 1px;
+    margin-right: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#home {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #11111b;
+    color: #ccd6f4;
+    outline: none;
+    font-family: 'DM Mono';
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
