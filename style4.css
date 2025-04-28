@@ -11,14 +11,13 @@ body {
 }
 h1 {
     color:#ccd6f4;
-    position: static;
+    margin-top: 200px;
     background: #11111b;
     outline: none;
     font-family: 'DM Mono';
     font-size: 95px;
     text-align: center;
     text-shadow: 0px 0px 3px #f2cdcd;
-    margin-top: 400px;
     animation: titleEnter 0.8s ease-out;
     border-style: solid;
     border-radius: 5px;
