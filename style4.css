@@ -1,0 +1,118 @@
+body {
+    /*background-color: rgb(30,30,46);
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; */
+    background: linear-gradient(rgb(30,30,46), rgb(0,0,0));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1 {
+    color:#ccd6f4;
+    background: transparent;
+    outline: none;
+    font-family: 'DM Mono';
+    font-size: 95px;
+    text-align: center;
+    text-shadow: 0px 0px 3px #f2cdcd;
+    margin-top: 400px;
+    animation: titleEnter 0.8s ease-out;
+}
+
+@keyframes titleEnter {
+    0% {
+        transform: translateY(150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+i:link {
+    text-decoration: none;
+    outline: none;
+    color: #b4befe;
+}
+i:visited {
+    text-decoration: none;
+    outline: none;
+    color: #b4befe;
+}
+i:hover {
+    text-decoration: none;
+    outline: none;
+    color: #f2cdcd;
+}
+i:active {
+    text-decoration: none;
+    outline: none;
+    color: #f2cdcd;
+}
+
+.iconbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: transparent; /* or any color you want */
+    padding: 10px 0;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+.iconbar i {
+    text-decoration: none;
+    outline: none;
+    color: #ccd6f4;
+    font-size: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.icon-bar a {
+    text-decoration: none;
+    outline: none;
+}
+.iconbar a:link {
+    color: transparent;
+}
+
+.iconbar a:visited {
+    color: transparent;
+}
+.iconbar a:hover {
+    color: transparent;
+}
+.iconbar a:active {
+    color: transparent;
+}
+
+html {
+    --s: 52px; /* control the size*/
+    --c1: #11111b;
+    --c2: #1e1e2e;
+    --c3: #181825;
+    
+    background:
+      repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
+       calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
+      repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
+    background-size: var(--s) calc(var(--s)*tan(30deg));
+  }
+
+p {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    background: transparent; /* or any color you want */
+    padding: 10px 0;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #ccd6f4;
+    font-family: 'DM Mono';
+}
