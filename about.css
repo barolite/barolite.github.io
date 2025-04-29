@@ -94,3 +94,16 @@ a:link {
   font-family: 'DM Mono', monospace;
   text-align: center;
 }
+
+a:visited {
+  color: var(--lavender);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  text-align: center;
+}
+a:active {
+  color: var(--lavender);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  text-align: center;
+}
