@@ -2,11 +2,11 @@
 
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+  font-family: 'DM Mono', monospace;  
+  color: var(--text);
+  background: linear-gradient(rgb(30,30,46), rgb(0,0,0));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 html {
@@ -22,31 +22,42 @@ html {
     background-size: var(--s) calc(var(--s)*tan(30deg));
 }
 
-div {
-  display: flex; 
-  justify-content: center;
-  flex-direction: column; 
-  align-items: center; 
-  gap: 10px; 
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 20px; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
 }
 
 img {
   border-radius: 10px;
   border-style: solid;
-  border-color: #ccd6f4;
-  border-width: 1px;
-  margin-right: 15px;
-  position: static;
-  margin-top: 100%;
+  border-color: var(--surface0);
+  border-width: 3px;
+  width: 300px;
+  height: 300px;
+}
+img:hover {
+  border-color: var(--lavender);
+  transition: border-color 0.3s ease;
 }
 
 p {
   color: var(--text);
-  font-size: 20px;
-  text-decoration: none;
-  font-family: 'DM Mono';
+  font-size: 22px;
+  max-width: 400px; 
 }
 
+.imglink {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 1px; 
+}
 
 #home {
   position: absolute;
@@ -69,3 +80,17 @@ p {
   transition: border-color 0.3s ease-in-out, transform 0.1s ease-in-out;
 }
 
+#credit:link {
+  color: var(--maroon);
+  font-size: 15px;
+  text-decoration: none;
+  font-family: DM Mono;
+  text-align: center;
+}
+
+a:link {
+  color: var(--lavender);
+  text-decoration: none;
+  font-family: DM Mono;
+  text-align: center;
+}
