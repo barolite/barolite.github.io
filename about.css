@@ -84,13 +84,13 @@ p {
   color: var(--maroon);
   font-size: 15px;
   text-decoration: none;
-  font-family: DM Mono;
+  font-family: 'DM Mono', monospace;
   text-align: center;
 }
 
 a:link {
   color: var(--lavender);
   text-decoration: none;
-  font-family: DM Mono;
+  font-family: 'DM Mono', monospace;
   text-align: center;
 }
