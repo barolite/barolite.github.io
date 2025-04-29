@@ -12,35 +12,49 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <button id="home" onclick="location.href='index.html'">Home</button>    
-    <div class="header">
-        <h2 id="playingorno">Loading...<h2>
-        <h2 id="now-playing-text"></h2>    
-        <div id="welcome">
-            <h1>Welcome</h1>
-        </div>
     
-    <div class="buttons">
-        <button onclick="location.href='about.html'">About</button> 
-        <button onclick="location.href='dog.html'">Projects</button>
+    <div class="Top">
+        <div class="home">
+            <button onclick="location.href='index.html'"id="home">Home</button>  
+        </div>
+            
+        <div class="header">
+            <h2 id="playingorno">Loading...<h2>
+            <h2 id="now-playing-text"></h2> 
+        </div>  
+        
     </div>
+    
+    <div class="content">
+        <div class="welcome">
+            <div class="welcome2"><strong>Welcome</strong></div>
+        </div>
+        
+        
 
 
-    <div class="iconbar">
-        <a href="https://x.com/barolite">    
-        <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://last.fm/user/barolite">
-        <i class="fa-brands fa-lastfm"></i>
-        </a>
-        <a href="https://open.spotify.com/user/31nwv5jek6owxuiphuxyby3slmji">
-        <i class="fa-brands fa-spotify"></i>
-        </a>
-        <a href="https://github.com/barolite">
-        <i class="fa-brands fa-github"></i>
-        </a>
+        <div class="iconbar">
+            <div class="buttons">
+                <button onclick="location.href='about.html'">About</button> 
+                <button onclick="location.href='dog.html'">Projects</button>
+            </div>
+            <div class="iconbar2">
+                <a href="https://x.com/barolite">    
+                <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://last.fm/user/barolite">
+                <i class="fa-brands fa-lastfm"></i>
+                </a>
+                <a href="https://open.spotify.com/user/31nwv5jek6owxuiphuxyby3slmji">
+                <i class="fa-brands fa-spotify"></i>
+                </a>
+                <a href="https://github.com/barolite">
+                <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <p id="wip">Work in progress.</p>
+        </div>
     </div>
-    <p id="wip">Work in progress.</p>
 
     <script>
 
@@ -77,4 +91,4 @@
         fetchNowPlaying(); 
     </script>
 </body>
-</html>
+</html> 

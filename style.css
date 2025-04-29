@@ -1,35 +1,83 @@
 @import url('./colors.css');
 
-/*global attributes go in body*/
 body {
-    display: flex;
-    justify-content: space-evenly;
+    /*display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    flex-direction: column;
+    row-gap: 20px;
+    height: 96vh;
+    border: 1px solid #ffffff;*/
     font-family: 'DM Mono', monospace;
     /*background: linear-gradient(var(--base), #000000);
     background-repeat: no-repeat;
     background-attachment: fixed;*/
 }
 
-/*"Welcome" header*/
-#welcome {
+.Top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 20px;
+    height: 20vh;
+    /*border: 1px solid #ffffff;*/
+    align-self: flex-end;
+    margin-top: 0;
+   
+}
 
+.header {
+    text-align: right;
+    margin-right: 5px;
+}
+
+
+.content {
+    height: 70vh;
+    /*border: 1px solid #ffffff;*/
+    margin-bottom: auto;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*"Welcome" header*/
+.welcome {
+    /*border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;*/
+    
+  
+    flex-shrink: 1;
+}
+.welcome2 {
     color: var(--text);
     background: var(--crust);
-    font-size: 40px;
+    font-size: clamp(16px, 10vw, 80px);
+    
     text-shadow: 0px 0px 3px var(--lavender);
     animation: titleEnter 0.8s ease-out;
     border-style: solid;
     border-radius: 5px;
-    border-color: #b4befe;
-    width: 600px;
-    height: 150px;
+    border-color: var(--surface0);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    flex-shrink: 0;
+    
+
+    height: 12vh;
+    width: 60vw;
+}
+
+.welcome2:hover {
+    border-color: var(--lavender);
+    transition: border-color 0.1s ease-in-out;
 }
 
 @keyframes titleEnter {
@@ -44,24 +92,28 @@ body {
 }
 
 .iconbar {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    background: transparent; /* or any color you want */
-    padding: 10px 0;
-    text-decoration: none;
-    margin-top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    height: 25vh;
+    width: 50vw;
+    
+    /*border: dotted 1px #ffffff;*/
 }
 
 .iconbar i {
     text-decoration: none;
     outline: none;
     color: #ccd6f4;
-    font-size: 50px;
-    margin-right: 25px;
-    margin-left: 25px;
+    font-size: clamp(40px, 5vw, 50px);
+    margin-left: 6px;
+    margin-right: 6px;
+
+    
 }
-.iconbar i:hover {
+.iconbar2 i:hover {
     transform: scale(1.3);
     transition: transform 0.1s ease-in-out;
 }
@@ -95,41 +147,33 @@ html {
       repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
 
     background-size: var(--s) calc(var(--s)*tan(30deg));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+
 
 }
 
 #wip {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: left;
-    margin-left: 10px;
-    background: transparent;
-    padding: 10px 0;
+
+    display: flex;
+    justify-content: center;
+
     text-decoration: none;
-    margin-bottom: 5px;
+
     color: #ccd6f4;
     font-family: 'DM Mono';
 }
 
 #home {
-    position: absolute;
-    top: 10px;
-    left: 10px;
     background: #11111b;
     color: #ccd6f4;
     outline: none;
     font-family: 'DM Mono';
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
-    margin-top: 20px;
     border-style: solid;
     border-color: var(--surface0);
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 3vh;
 }
 
 #home:hover {
@@ -139,42 +183,37 @@ html {
 }
 
 .buttons {
-    display: flex;
-    position: absolute;
-    flex-wrap: nowrap;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -0%);
     background-color: transparent;
     opacity: 1;
     color: #cba6f7;
-    font-size: 30px;
+
     font-family: DM Mono;
-    border-style: none;
+    /*border-style: solid;
     border-color: #ccd6f4;
+    border-width: 1px;*/
     animation: 0.8s buttonFadeIn;
-    gap: 20px;
+    margin-bottom: auto;
+    flex-shrink: 1;
 }
 
 .buttons button {
     background-color: #11111b;
     opacity: 1;
     color: #ccd6f4;
-    font-size: 40px;
+    font-size: clamP(5px, 5vw, 40px);
     font-family: DM Mono;
     border-style: solid;
     border-color: var(--surface0);
     border-width: 3px;
     border-radius: 5px;
     transition: transform .2s;
-    margin-left: 10px;
-    margin-right: 10px;
+    flex-shrink: 1;
 }
 
 .buttons button:hover {
     border-color: var(--lavender);
     transform: scale(1.05);
-    transition: border-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out border-color 0.3s ease-in-out;
 }
 
 @keyframes buttonFadeIn {
@@ -186,20 +225,14 @@ html {
     }
 }
 
+
+
 h2 {
     color: #ccd6f4;
-    position: absolute;
-    top: 10px;
-    right: 10px;
     background: transparent;
     outline: none;
     font-family: 'DM Mono';
     font-size: 15px;
-    text-align: center;
-    margin-top: 20px;
     animation: titleEnter 0.8s ease-out;
 }
 
-#now-playing-text {
-    top: 40px;
-}
