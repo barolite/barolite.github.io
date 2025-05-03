@@ -1,0 +1,184 @@
+@import url(colors_l.css);
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+    height: 200vh;
+    background-color: var(--base_l);
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.gap1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+
+.header {
+    background-color: var(--crust_l);
+    
+    height: 5vh;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size:clamp(20px, 3vw, 30px);
+
+    
+}
+
+
+.nav_top {display: flex; gap: 5vw;}
+.nav_top a {text-decoration: none; color:var(--red_l);}
+.nav_top a:hover {color:var(--teal_l);}
+.nav_top a:active{color:var(--peach_l);}
+.nav_top a:visited{color:var(--red_l);}
+
+
+
+.sec1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 60vh;
+    gap: 5vh;
+}
+
+
+img {   
+    height: 30vh;
+    transform: rotateZ(0deg);
+    transition: transform 16s ease;
+}
+img:hover {transform: rotateZ(3600deg);}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+
+    text-align: center;
+    
+    
+}
+
+#bigtitle {
+    font-size: 8vh;
+    color: var(--text_l);
+}
+#Subtitle {
+    font-size:3vh;
+    color: var(--subtext1_l);
+}
+.subtitle {
+    color: var(--subtext1_l);
+    font-size: 3vh;
+}
+
+.sec2bg {
+    height: 30vh;
+    background-color: var(--crust_l);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 30px;
+}
+
+.boxsection {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    font-size: clamp(20px, 1vw, 30px);
+    
+
+    margin-top: 20px;
+}
+
+.box {
+    width: 15vw;
+    height: 15vh;
+    transform: scale(1);
+    
+    background-color: var(--surface0_l);
+    border-radius: 20px;
+    transition: transform 0.1s ease, background-color 0.5s ease;
+}
+
+.box:hover {transform: scale(1.1); background-color: var(--surface1_l);}
+
+#box1 {border: solid 4px var(--red_l);}
+#box2 {border: solid 4px var(--teal_l);}
+#box3 {border: solid 4px var(--green_l);}
+#box4 {border: solid 4px var(--yellow_l);}
+
+.sec3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sechead {
+    color: var(--text_l);
+    font-size: 5.5vh;
+
+    text-align: center;
+    margin-top: 25px;
+}
+
+.bigwrap {
+    position: relative;
+    background: linear-gradient(180deg, var(--red_l), var(--teal_l));
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+    background-size: 100% 100%;
+}
+
+
+.box2 {
+    width: 80vw;
+    height: 40vh;
+    background-color: var(--surface0_l);
+
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+}
+
+.box2:hover {
+    background-color: var(--surface2_l);
+}
+
+.footer {
+    background-color: var(--crust_l);
+    
+    height: 5vh;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size:20px;
+}
