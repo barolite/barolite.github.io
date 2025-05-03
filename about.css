@@ -37,13 +37,15 @@ img {
   border-radius: 10px;
   border-style: solid;
   border-color: var(--surface0);
-  border-width: 3px;
+  border-width: 5px;
   width: 300px;
   height: 300px;
+  transition: border-color 0.1s ease;
 }
+
 img:hover {
   border-color: var(--lavender);
-  transition: border-color 0.3s ease;
+  
 }
 
 p {
@@ -67,17 +69,19 @@ p {
   color: #ccd6f4;
   outline: none;
   font-family: 'DM Mono';
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   margin-top: 20px;
+
   border-style: solid;
   border-color: var(--surface0);
+  transition: border-color 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
 #home:hover {
   border-color: var(--lavender);
   transform: scale(1.05);
-  transition: border-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+  
 }
 
 #credit:link {
