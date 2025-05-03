@@ -61,11 +61,12 @@ p {
   margin-top: 20px;
   border-style: solid;
   border-color: var(--surface0);
+  transition: border-color 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
 #home:hover {
   border-color: var(--lavender);
   transform: scale(1.05);
-  transition: border-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+
 }
 
