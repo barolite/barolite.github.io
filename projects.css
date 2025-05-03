@@ -1,0 +1,107 @@
+@import url('./colors.css');
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  margin: 0px;
+  font-family: 'DM Mono', monospace;
+}
+
+html {
+    --s: 52px; /* control the size*/
+    --c1: #11111b;
+    --c2: #1e1e2e;
+    --c3: #181825;
+    
+    background:
+      repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
+       calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
+      repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
+    background-size: var(--s) calc(var(--s)*tan(30deg));
+}
+
+div {
+  display: flex; 
+  justify-content: center;
+  flex-direction: column; 
+  align-items: center; 
+  background-color: var(--base);
+  opacity: 100%;
+  border-radius: 25px;
+
+  width: 80%;
+  height: 40%;
+}
+
+#home {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #11111b;
+  color: #ccd6f4;
+  outline: none;
+  font-family: 'DM Mono';
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-style: solid;
+  border-color: var(--surface0);
+  transition: border-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+#home:hover {
+  border-color: var(--lavender);
+  transform: scale(1.05);
+
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 4vh;
+
+   
+    justify-content: space-between;
+}
+
+.section {
+    color: var(--text);
+    font-size: 30px;
+}
+
+#p {
+    background-color: var(--crust);
+    color: var(--text);
+    width: 30%;
+    font-size: 30px;
+    border-width: 3px;
+    border-color: var(--surface0);
+    border-style: solid;
+    transition: border-color 0.15s ease;
+    color: var(--overlay2);
+}
+#p:hover {
+    border-color: var(--red);
+}
+#b {
+    background-color: var(--crust);
+    color: var(--text);
+    width: 30%;
+    height: 40%;
+    border-style: solid;
+    border-radius: 25px;
+    font-size: 30px;
+    border-width: 3px;
+    border-color: var(--surface0);
+    transition: border-color 0.15s ease;
+    font-family: 'DM Mono'
+    
+}
+#b:hover {
+    border-color: var(--green);
+}
