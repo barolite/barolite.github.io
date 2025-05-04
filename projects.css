@@ -13,6 +13,30 @@ body {
   font-family: 'DM Mono', monospace;
 }
 
+/* phones */
+@media screen and (max-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 200vh;
+  }
+  div {
+    width: 60%;
+    height: 200%;
+  }
+  .section {
+    color: var(--text);
+    font-size: 20px;
+    gap: 0px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+  }
+}
+
 html {
     --s: 52px; /* control the size*/
     --c1: #11111b;
@@ -63,9 +87,8 @@ div {
 
 .card {
     display: flex;
-    flex-direction: row;
     gap: 4vh;
-
+    flex-direction: row;
    
     justify-content: space-between;
 }
