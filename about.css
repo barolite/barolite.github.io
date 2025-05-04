@@ -1,14 +1,6 @@
 @import url('./colors.css');
 
 
-body {
-  font-family: 'DM Mono', monospace;  
-  color: var(--text);
-  background: linear-gradient(rgb(30,30,46), rgb(0,0,0));
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 html {
     --s: 52px; /* control the size*/
     --c1: #11111b;
@@ -22,66 +14,189 @@ html {
     background-size: var(--s) calc(var(--s)*tan(30deg));
 }
 
-.main {
+
+
+body {
+  height: 100vh;
+  margin: 0;
+
   display: flex;
   align-items: center;
-  justify-content: center; 
-  gap: 20px; 
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+  justify-content: center;
+  padding: 0%;
+  font-family: "DM Mono", monospace, sans-serif;
 }
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 1.5fr 1fr;
+
+  height: 90%;
+  padding: 20px;
+  gap: 1em;
+  grid-template-areas: 
+  "snepgif img p5 p6"
+  "p2 img p3 p3"
+  "p2 p4 p4 p4";
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto auto auto auto auto auto; 
+    grid-template-areas: 
+      "snepgif img"
+      "p2 img"
+      "p2 p3"
+      "p4 p4"
+      "p5 p6"; /* Stack p5 and p6 */
+  }
+
+  #snepgif {
+    height: auto; 
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto; 
+    grid-template-areas: 
+      "snepgif"
+      "img"
+      "p3"
+      "p4"
+      "p5"
+      "p6"
+      "p2";
+  }
+
+  #snepgif {
+    height: auto;
+  }
+
+  .img {
+    font-size: 1.2em; 
+  }
+
+  #specs {
+    font-size: 1.5em; 
+  }
+}
+
+#now-playing-text {
+  font-size: 22px;
+}
+
+.p {
+  border: solid 5px var(--surface0); 
+  transition: border-color 0.1s ease;
+
+  color: var(--text);
+  border-radius: 8px;
+}
+.p:hover {border-color: var(--lavender);}
+.img:hover {border-color: var(--lavender);}
+img:hover {border-color: var(--lavender);}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border: solid 5px var(--surface0);
+  transition: border-color 0.1s ease;
+  padding: 8px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, var(--base), var(--crust));
+}
+
+.img {
+  font-family: 'DM Mono', monospace;
+  font-size: 25px;
+  color: var(--text);
+  text-align: center;
+}
+
 
 img {
+  width: 99%;
+  height: 99%;
+}
+
+#snepgif {
+  width: 98%;
+  height: 240px;
+  border: solid 5px var(--surface0);
   border-radius: 10px;
-  border-style: solid;
-  border-color: var(--surface0);
-  border-width: 5px;
-  width: 300px;
-  height: 300px;
   transition: border-color 0.1s ease;
 }
+#snep:hover {border-color: var(--lavender);}
+#snepgif:hover {border-color: var(--lavender);}
 
-img:hover {
-  border-color: var(--lavender);
-  
+#snep {
+  width: 275px;
+  height: 275px;
+  border: solid 3px var(--surface0);
+  border-radius: 10px;
+  transition: border-color 0.1s ease;}
+
+#p1 {background: linear-gradient(to bottom, var(--base), var(--mantle));display:flex;align-items: center;justify-content: center;}
+
+/*#p2 {background: linear-gradient(to bottom, var(--mantle), black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}*/
+
+#p4 {background: linear-gradient(to bottom, var(--crust), black);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-p {
-  color: var(--text);
-  font-size: 22px;
-  max-width: 400px; 
+#p5 {
+  background: linear-gradient(to bottom, var(--base), var(--mantle));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
 }
 
-.imglink {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  gap: 1px; 
+
+
+#p6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #home {
   position: absolute;
-  top: 10px;
+  top: 0px;
   left: 10px;
   background: #11111b;
   color: #ccd6f4;
   outline: none;
   font-family: 'DM Mono';
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   margin-top: 20px;
-
   border-style: solid;
   border-color: var(--surface0);
-  transition: border-color 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
 #home:hover {
   border-color: var(--lavender);
   transform: scale(1.05);
-  
+  transition: border-color 0.3s ease-in-out, transform 0.1s ease-in-out;
 }
 
 #credit:link {
@@ -110,4 +225,109 @@ a:active {
   text-decoration: none;
   font-family: 'DM Mono', monospace;
   text-align: center;
+}
+
+#p3 {
+  background: linear-gradient(to bottom, var(--mantle), var(--crust));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+#specs {
+  text-align: center;
+  font-size: 31px;
+}
+
+.fa-debian {
+  font-size: 150px;
+}
+
+#specsdesc {
+  font-size: 20px;
+}
+
+#specsdesc li{
+  line-height: 2.5;
+}
+
+#snepwrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#iconbar {
+  font-size: 65px;
+  text-align: center;
+}
+
+
+.fa-discord {
+  color: var(--sapphire);
+}
+.fa-youtube {
+  color: var(--red);
+}
+.fa-bluesky {
+  color:var(--sky);
+}
+.fa-tumblr {
+  color:var(--teal);
+}
+.fa-steam {
+  color:var(--mauve);
+}
+.fa-twitter {
+  color:var(--text);
+}
+.fa-spotify {
+  color:var(--green);
+}
+.fa-github {
+  color:var(--peach);
+}
+.fa-lastfm {
+  color:var(--maroon);
+}
+
+#roblox {
+  width: 65px;
+  height: 65px;
+  color: var(--lavender);
+  transform: translateY(7px);
+}
+
+
+
+#p2 {
+  --s: 60px;
+  
+  --g1:conic-gradient(at 37.5% 87.5%,#0000 75%,var(--base) 0);
+  --g2:conic-gradient(at 12.5% 62.5%,#0000 75%,var(--overlay1) 0);
+  background:
+    var(--g2) calc(  var(--s)/4) calc(  var(--s)/4),
+    var(--g2) calc(5*var(--s)/4) calc(5*var(--s)/4),
+    var(--g1),var(--g1) var(--s) var(--s) var(--crust);
+  background-size: calc(2*var(--s)) calc(2*var(--s));
+  animation: g15 2s infinite linear;
+}
+@keyframes g15 {
+  to {
+    background-position: 
+      calc(  var(--s)/4) calc( 9*var(--s)/4),
+      calc(5*var(--s)/4) calc(-3*var(--s)/4),
+      0 calc(2*var(--s)),
+      var(--s) calc(-1*var(--s));
+  }
 }

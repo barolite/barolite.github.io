@@ -5,25 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about barolite</title>
     <link rel="stylesheet" href="about.css">
+    <script src="https://kit.fontawesome.com/0c8ff4ec4c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!--<script src="scripts/animation.js"></script> maybe ill want it back someday--> 
 </head>
 <body>
     <button id="home" onclick="location.href='index.html'">Home</button>
     <div class="main">
-        <div class="imglink">
-            <img src="images/snep.png">
-            <p style="font-size: 15px;">image credit: <a id="credit" href="https://x.com/moonfkzw_">@moonfkzw_</a></p>
+        <img id="snepgif" src="images/snep.gif">
+        <div class="p" id="p5" style="grid-area: p5">
+            <div class="header">
+                <h2 id="playingorno">Loading...</h2>
+                <p id="now-playing-text"></p>
+                <h3>via <a style="color: var(--maroon)" href="https://last.fm/user/barolite">last.fm</a></h3> 
+            </div>  
         </div>
-        <p>
-            <strong>barolite</strong> is a 17-year-old <i>learning</i> web developer from california.
+        <div class="p" id="p6" style="grid-area: p6"></div>
+        <div class="p" id="p2" style="grid-area: p2">          
+            <p class=favorites></p>
+        </div>
+        <div class="img" style="grid-area: img">
+            <div id="snepwrapper">
+                <img id="snep" src="images/snep.png">
+                <p style="font-size: 14px;">image credit: <a id="credit" href="https://x.com/moonfkzw_">@moonfkzw_</a></p>
+            </div>
+            <p><strong>barolite</strong> is a 17-year-old <i>learning</i> web developer from california.
             he is currently working on his personal website. 
-            in his free time, he enjoys listening to <a href="https://last.fm/user/barolite">lots of music</a>.
-        </p>
-        
-    </div>
+            in his free time, he enjoys listening to music and playing a few games.</p>
+        </div>
+        <div class="p" id="p3" style="grid-area: p3">
+            <h2 id="specs">specs</h2>
+            <div id="wrapper">
+                <ul id="specsdesc">
+                    <li>intel core i5-355U</li>
+                    <li>8GB RAM, 128GB SSD</li>
+                    <li>debian 12 w/ gnome 43</li>
+                </ul>
+                <i class="fa-brands fa-debian"></i>
+            </div>
+
+        </div>
+        <div class="p" id="p4" style="grid-area: p4">
+            <h2 id="specs">my (many) socials</h2>
+            <div id="iconbar">
+                <a href="https://www.youtube.com/@barolite">    
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://discord.com/users/707094670588641400">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                <a href="https://github.com/barolite">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://bsky.app/profile/barolite.bsky.social">
+                    <i class="fa-brands fa-bluesky"></i>
+                </a>
+                <a href="https://x.com/barolite">    
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.roblox.com/users/2243315847/profile">
+                    <img id="roblox" src="images/roblox.png"/>
+                </a>
+                <a href="https://last.fm/user/barolite">
+                    <i class="fa-brands fa-lastfm"></i>
+                </a>
+                <a href="mailto:barolites@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://steamcommunity.com/id/barolite">
+                    <i class="fa-brands fa-steam"></i>
+                </a>
+                <a href="https://open.spotify.com/user/31nwv5jek6owxuiphuxyby3slmji">
+                    <i class="fa-brands fa-spotify"></i>
+                </a>
+            </div>
+        </div>
     
+        <script>
+            const nowPlayingText = document.getElementById('now-playing-text');
+            const playingorno = document.getElementById('playingorno');
+            const albumCoverDiv = document.getElementById('p6');
+        
+            const API_URL = 'https://candid-sunshine-90af46.netlify.app/.netlify/functions/nowplaying';
+        
+            async function fetchNowPlaying() {
+                try {
+                    const response = await fetch(API_URL);
+                    if (!response.ok) throw new Error(`http error status ${response.status}`);
+        
+                    const data = await response.json();
+                    const track = data.recenttracks.track[0];
+        
+                    const artist = track.artist['#text'];
+                    const title = track.name;
+                    const imageList = track.image;
+                    const image = imageList && imageList.length ? imageList[imageList.length - 1]['#text'] : '';
+        
+                    if (track['@attr'] && track['@attr'].nowplaying === 'true') {
+                        playingorno.textContent = 'I am listening to:';
+                    } else {
+                        playingorno.textContent = 'I last listened to:';
+                    }
+        
+                    nowPlayingText.textContent = `${artist} - ${title}`;
+        
+                    // album cover part
+                    if (image) {
+                        albumCoverDiv.innerHTML = `<img src="${image}">`; //album cover
+                    } else {
+                        albumCoverDiv.innerHTML = `<img src="images/default.png">`; // default
+                    }
+        
+                } catch (error) {
+                    console.error('Error fetching Last.fm data:', error);
+                    nowPlayingText.textContent = 'error loading music info';
+                    albumCoverDiv.innerHTML = `<img id="album" src="images/default.png">`;
+                }
+            }
+        
+             fetchNowPlaying();
+        </script>
 </body>
 </html>
