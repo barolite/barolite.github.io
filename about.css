@@ -2,7 +2,7 @@
 
 
 html {
-    --s: 52px; /* control the size*/
+    --s: 52px; 
     --c1: #11111b;
     --c2: #1e1e2e;
     --c3: #181825;
@@ -41,7 +41,24 @@ body {
   "p2 p4 p4 p4";
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr;
+  
+    height: 90%;
+    padding: 20px;
+    gap: 1em;
+    grid-template-areas: 
+    "snepgif p5 p6"
+    "p2 img p3"
+    "p2 p4 p4";
+  }
+}
+
+/* tablets */
+@media screen and (max-width: 858px) {
   .main {
     grid-template-columns: 1fr 1.5fr;
     grid-template-rows: auto auto auto auto auto auto; 
@@ -50,15 +67,16 @@ body {
       "p2 img"
       "p2 p3"
       "p4 p4"
-      "p5 p6"; /* Stack p5 and p6 */
+      "p5 p6"; 
   }
 
   #snepgif {
     height: auto; 
   }
-
+  #now-playing-text {font-size: 10px;}
 }
 
+/* phones */
 @media screen and (max-width: 480px) {
   .main {
     grid-template-columns: 1fr;
@@ -73,22 +91,14 @@ body {
       "p2";
   }
 
-  #snepgif {
-    height: auto;
+  #snepgif {height: auto;}
+  .img {font-size: 1.2em;}
+  #specs {font-size: 1.5em;}
   }
 
-  .img {
-    font-size: 1.2em; 
-  }
 
-  #specs {
-    font-size: 1.5em; 
-  }
-}
 
-#now-playing-text {
-  font-size: 22px;
-}
+#now-playing-text {font-size: 22px;}
 
 .p {
   border: solid 5px var(--surface0); 
@@ -112,21 +122,28 @@ img:hover {border-color: var(--lavender);}
   padding: 8px;
   border-radius: 10px;
   background: linear-gradient(to bottom, var(--base), var(--crust));
-}
 
-.img {
   font-family: 'DM Mono', monospace;
   font-size: 25px;
   color: var(--text);
   text-align: center;
 }
 
-
 img {
   width: 99%;
   height: 99%;
 }
 
+/*stupid text messing up my grid*/
+h2 {
+  font-size: 20px;
+}
+#now-playing-text {
+  font-size: 18px;
+}
+h3 {
+  font-size: 15px;
+}
 #snepgif {
   width: 98%;
   height: 240px;
@@ -159,6 +176,8 @@ img {
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
+  padding: 5px;
 }
 
 #p5 {
@@ -250,7 +269,7 @@ a:active {
 }
 
 .fa-debian {
-  font-size: 150px;
+  font-size: 140px;
 }
 
 #specsdesc {
@@ -270,7 +289,9 @@ a:active {
 #iconbar {
   font-size: 65px;
   text-align: center;
+
 }
+
 
 
 .fa-discord {
