@@ -16,80 +16,21 @@
     <div class="Top">
         <div class="home">
             <button onclick="location.href='index.html'"id="home">Home</button>  
-        </div>
-            
-        <div class="header">
-            <h2 id="playingorno">Loading...<h2>
-            <h2 id="now-playing-text"></h2> 
-        </div>  
-        
+        </div>   
     </div>
     
     <div class="content">
         <div class="welcome">
             <div class="welcome2"><strong>Welcome</strong></div>
         </div>
-        
-        
-
-
         <div class="iconbar">
             <div class="buttons">
                 <button onclick="location.href='about.html'">About</button> 
                 <button onclick="location.href='projects.html'">Projects</button>
                 <button onclick="location.href='dog.html'">???</button>
-            </div>
-            <div class="iconbar2">
-                <a href="https://x.com/barolite">    
-                <i class="fa-brands fa-x-twitter"></i>
-                </a>
-                <a href="https://last.fm/user/barolite">
-                <i class="fa-brands fa-lastfm"></i>
-                </a>
-                <a href="https://open.spotify.com/user/31nwv5jek6owxuiphuxyby3slmji">
-                <i class="fa-brands fa-spotify"></i>
-                </a>
-                <a href="https://github.com/barolite">
-                <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
+            </div>        
             <p id="wip">Work in progress.</p>
         </div>
     </div>
-
-    <script>
-
-        const nowPlayingText = document.getElementById('now-playing-text');
-        const playingorno = document.getElementById('playingorno');
-
-        const API_URL = 'https://candid-sunshine-90af46.netlify.app/.netlify/functions/nowplaying';
-
-
-        async function fetchNowPlaying() {
-            try {
-                const response = await fetch(API_URL);
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                const track = data.recenttracks.track[0]; 
-
-                if (track['@attr'] && track['@attr'].nowplaying === 'true') {
-                    playingorno.textContent = 'Now playing:';
-                    nowPlayingText.textContent = `${track.artist['#text']} - ${track.name}`;
-                } else {
-                    playingorno.textContent = 'Last played:';
-                    nowPlayingText.textContent = `${track.artist['#text']} - ${track.name}`;
-                }
-            } catch (error) {
-                console.error('Error fetching Last.fm data:', error);
-                nowPlayingText.textContent = 'Error loading music info';
-            }
-        }
-
-        fetchNowPlaying(); 
-    </script>
 </body>
 </html> 
