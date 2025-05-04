@@ -321,6 +321,9 @@ a:active {
 .fa-lastfm {
   color:var(--maroon);
 }
+.fa-cube {
+  color:var(--yellow);
+}
 
 #roblox {
   width: 65px;
