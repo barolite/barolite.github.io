@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about barolite</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="https://kit.fontawesome.com/0c8ff4ec4c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!--<script src="scripts/animation.js"></script> maybe ill want it back someday--> 
+</head>
+<body>
+    <main>
+
+        <div class="blank" style="grid-area: blank2"></div>
+        <div class="blank" style="grid-area: blank3"></div>
+        <div class="blank" style="grid-area: blank4"></div>
+        <div class="blank" style="grid-area: blank5"></div>
+        
+        <div class="p" id="time" style="grid-area: time">Time</div>
+        <button id="home" class="p button" target="_blank" onclick="location.href='https://barolite.github.io/'" style="grid-area: home">home</button>
+        <button id="projects" class="p button" target="_blank" onclick="location.href='https://barolite.github.io/projects'" style="grid-area: projects">projects</button>
+        <button id="dog" class="p button" target="_blank" onclick="location.href='https://barolite.github.io/dog'" style="grid-area: dog">more info</button>
+        <button id="source" class="p button" target="_blank" onclick="location.href='https://github.com/barolite/barolite.github.io'" style="grid-area: source">source code</button>
+        <!--<img id="snepgif" src="images/snep.gif" style="grid-area: snepgif">-->
+        <div class="p" id="nowplayingdiv" style="grid-area: nowplaying">
+            <p>i'm listening to </p>
+            <p id="nowplaying"></p>
+            <p>| via <a target="_blank" id="credit" href="https://www.last.fm/user/barolite">last.fm</a></p>
+        </div>
+        <!--<div class="p" id="album" style="grid-area: album">
+        </div>-->
+        <!--<div class="p" id="pattern" style="grid-area: pattern"></div>
+        <div class="p" id="pattern" style="grid-area: pattern2"></div>-->
+        <div class="p"  id="bio" style="grid-area: bio">
+            <!--<div id="snepwrapper">
+                <img id="snep" src="images/snep.png">
+                <p style="font-size: 14px;">image credit: <a target="_blank" id="credit" href="https://x.com/moonfkzw_">@moonfkzw_</a></p>
+            </div>-->
+            <p><strong>barolite</strong> is a 17-year-old <i>learning</i> web developer from california.
+            he is currently working on his personal website. 
+            in his free time, he enjoys listening to music and playing a few games.</p>
+        </div>
+        <div class="p" id="specs" style="grid-area: specs">
+            <p id="wrapper">my specs:<br>intel core i5-355U<br>8GB RAM, 128GB SSD<br>gnome 43 on debian 12</p>
+            
+            <i class="fa-brands fa-debian"></i>
+        </div>
+
+        </div>
+        <div class="p" id="socials" style="grid-area: socials">
+            <h2 id="socialstitle">contact</h2>
+            <div id="iconbar">
+                <a href="https://www.youtube.com/@barolite">    
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://discord.com/users/707094670588641400">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                <a href="https://github.com/barolite">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a target="_blank" href="https://bsky.app/profile/barolite.bsky.social">
+                    <i class="fa-brands fa-bluesky"></i>
+                </a>
+                <a target="_blank" href="https://x.com/barolite">    
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <!--<a target="_blank" href="https://www.roblox.com/users/2243315847/profile">
+                    <img id="roblox" src="images/roblox.svg"/>
+                </a>-->
+                <a target="_blank" href="https://namemc.com/profile/barolite.1">
+                    <i class="fa-solid fa-cube"></i>
+                </a>
+                <a target="_blank" href="https://last.fm/user/barolite">
+                    <i class="fa-brands fa-lastfm"></i>
+                </a>
+                <a target="_blank" href="mailto:barolites@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a target="_blank" href="https://steamcommunity.com/id/barolite">
+                    <i class="fa-brands fa-steam"></i>
+                </a>
+                <a target="_blank" href="https://open.spotify.com/user/31nwv5jek6owxuiphuxyby3slmji">
+                    <i class="fa-brands fa-spotify"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/music.js"></script>
+    <script src="scripts/time.js"></script>
+</html>
