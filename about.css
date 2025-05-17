@@ -51,7 +51,7 @@ main {
         background-position: center;
 
     }
-    
+    #specs {display: flex; justify-content: space-evenly !important;}
     main {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(10, 100px); 
