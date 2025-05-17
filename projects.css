@@ -2,15 +2,25 @@
 
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--base);
+  background-image: url("images/wallpaper.jpg");
+  background-size: cover;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr;
+  grid-auto-rows: 1fr;
+  height: 100vh;
+  grid-template-areas: 
+  "home home"
+  "demo1 demo2"
+  "roblox demo3";
   gap: 20px;
 
-  height: 100vh;
   margin: 0px;
-  font-family: 'DM Mono', monospace;
+  padding: 0px;
+  font-family: monospace;
 }
 
 /* phones */
@@ -37,85 +47,28 @@ body {
   }
 }
 
-html {
-    --s: 52px; /* control the size*/
-    --c1: #11111b;
-    --c2: #1e1e2e;
-    --c3: #181825;
-    
-    background:
-      repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
-       calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
-      repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
-    background-size: var(--s) calc(var(--s)*tan(30deg));
-}
 
-div {
+
+.div {
   display: flex; 
   justify-content: center;
   flex-direction: column; 
   align-items: center; 
-  background-color: var(--base);
-  opacity: 100%;
-  border-radius: 25px;
-
-  width: 80%;
-  height: 32%;
+  background-color: var(--tcrust);
+  border: solid 2px var(--surface0);
+  color: var(--text);
+  font-size: 30px;
 }
 
-#home {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #11111b;
-  color: #ccd6f4;
-  outline: none;
-  font-family: 'DM Mono';
-  font-size: 20px;
-  text-align: center;
-  margin-top: 20px;
-  border-style: solid;
-  border-color: var(--surface0);
-  transition: border-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+button {
+  border-style: none;
+  font-family: monospace;
 }
-
-#home:hover {
-  border-color: var(--lavender);
-  transform: scale(1.05);
-
+.p {
+  color: var(--overlay0);
+  width: 99%;
 }
-
-.card {
-    display: flex;
-    gap: 4vh;
-    flex-direction: row;
-   
-    justify-content: space-between;
-}
-
-.section {
-    color: var(--text);
-    font-size: 30px;
-}
-
-#card2 {
-  justify-content: center;
-}
-
-#p {
-    background-color: var(--crust);
-    color: var(--text);
-    width: 30%;
-    font-size: 20px;
-    border-width: 3px;
-    border-color: var(--surface0);
-    border-style: solid;
-    transition: border-color 0.15s ease;
-    color: var(--overlay2);
-}
-#p:hover {
-    border-color: var(--red);
-}
+.p:hover{border-color: var(--red);}
 #b {
     background-color: var(--crust);
     color: var(--text);
@@ -127,9 +80,13 @@ div {
     border-width: 3px;
     border-color: var(--surface0);
     transition: border-color 0.15s ease;
-    font-family: 'DM Mono'
+
     
 }
-#b:hover {
+.b:hover {
     border-color: var(--green);
+}
+
+#home:hover {
+  border-color: var(--lavender);
 }
