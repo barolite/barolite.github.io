@@ -1,7 +1,7 @@
 
-const nowPlayingText = document.getElementById('now-playing-text');
-const playingorno = document.getElementById('playingorno');
-const albumCoverDiv = document.getElementById('p6');
+const nowPlayingText = document.getElementById('nowplaying');
+//const playingorno = document.getElementById('playingorno');
+//const albumCoverDiv = document.getElementById('album');
 
 const API_URL = 'https://candid-sunshine-90af46.netlify.app/.netlify/functions/nowplaying';
 
@@ -18,20 +18,23 @@ async function fetchNowPlaying() {
         const imageList = track.image;
         const image = imageList && imageList.length ? imageList[imageList.length - 1]['#text'] : '';
 
-        if (track['@attr'] && track['@attr'].nowplaying === 'true') {
-            playingorno.textContent = 'I am listening to:';
+        /*if (track['@attr'] && track['@attr'].nowplaying === 'true') {
+            playingorno.textContent = '';
         } else {
-            playingorno.textContent = 'I last listened to:';
+            playingorno.textContent = '';
+        }*/
+        if (track['@attr'] && track['@attr'].nowplaying === 'true') {
+            nowPlayingText.textContent = `${artist} - ${title}`;
+        } else {
+            nowPlayingText.textContent = 'nothing';
         }
 
-        nowPlayingText.textContent = `${artist} - ${title}`;
-
-        // album cover part
+        /* album cover part
         if (image) {
             albumCoverDiv.innerHTML = `<img src="${image}">`; //album cover
         } else {
-            albumCoverDiv.innerHTML = `<img src="images/default.png">`; // default
-        }
+            albumCoverDiv.innerHTML = `<img style="position: absolute; transform: rotate(45deg)" src="images/default.png">`; // default
+        }*/
 
     } catch (error) {
         console.error('Error fetching Last.fm data:', error);
