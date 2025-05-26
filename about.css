@@ -51,7 +51,7 @@ main {
         grid-template-columns: repeat(12, 0.083fr);
       grid-template-rows: .5fr .5fr 1fr 1fr 1fr .3fr .3fr 1fr 1fr;
       grid-template-areas: 
-        "time time time nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying home home home"
+        "home home home nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying time time time"
         "blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2"
         "bio bio bio bio bio bio bio bio bio bio bio bio"
         "specs specs specs specs specs specs specs specs specs specs specs specs"
