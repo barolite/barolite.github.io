@@ -24,7 +24,6 @@ main {
     "blank6 socials socials socials socials socials socials socials socials socials socials blank7";
     gap: 0.7em; }
 
-/* phones */
 @media screen and (max-width: 1550px) {
     p {font-size: 10px !important;}
     button {font-size: 10px !important;}
@@ -49,18 +48,24 @@ main {
     }
     #specs {display: flex; justify-content: space-evenly !important;}
     main {
-      grid-template-columns: repeat(12, 0.083fr);
-      grid-template-rows: 100px 100px 100px 1px 100px 100px 1px;
+        grid-template-columns: repeat(12, 0.083fr);
+      grid-template-rows: .5fr .5fr 1fr 1fr 1fr .3fr .3fr 1fr 1fr;
       grid-template-areas: 
         "time time time nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying home home home"
-        "bio bio bio bio bio bio specs specs specs specs specs specs"
+        "blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2"
+        "bio bio bio bio bio bio bio bio bio bio bio bio"
+        "specs specs specs specs specs specs specs specs specs specs specs specs"
         "projects projects projects projects source source source source dog dog dog dog"
-        "blank2 blank2 blank2 blank2 blank3 blank3 blank3 blank3 blank5 blank5 blank5 blank5"
+        "blank3 blank3 blank3 blank3 blank3 blank3 blank5 blank5 blank5 blank5 blank5 blank5"
+        "blank6 blank6 blank6 blank6 blank7 blank7 blank7 blank7 blank8 blank8 blank8 blank8"
         "socials socials socials socials socials socials socials socials socials socials socials socials"
-        "socials socials socials socials socials socials socials socials socials socials socials socials"
-        "blank6 blank6 blank6 blank6 blank7 blank7 blank7 blank7 blank8 blank8 blank8 blank8";
+        "socials socials socials socials socials socials socials socials socials socials socials socials";
     }
     
+    #bio p {
+        font-size: 12px !important;
+        text-align: center;
+    }
     #iconbar i{font-size: 60px;}}
   
 
