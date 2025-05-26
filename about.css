@@ -13,20 +13,16 @@ main {
     height: 100vh;
     padding: 0;
     margin: 0;
-    grid-template-columns: 0.6fr 0.4fr 1.25fr 0.75fr 1fr 0.75fr 1.25fr 0.4fr 0.6fr;
-    grid-template-rows: 0.25fr repeat(7, 1fr) 0.8fr;
-    ;
+    grid-template-columns: 0.6fr 0.4fr repeat(8, 0.12fr) 0.4fr 0.6fr;
+    grid-template-rows: 0.1fr 1fr 1fr 0.17fr 1fr 0.4fr;
     grid-template-areas: 
-    "home pattern2 nowplaying nowplaying nowplaying nowplaying nowplaying pattern time"
-    "blank2 blank2 blank blank blank blank blank blank blank"
-    "blank2 blank2 blank blank blank blank blank blank blank"
-    "blank2 blank2 bio bio blank3 specs specs blank4 blank4"
-    "blank2 blank2 bio bio blank3 specs specs blank4 blank4"
-    "blank2 blank2 projects source blank3 dog dog blank4 blank4"
-    "blank2 blank2 blank5 blank5 blank5 blank5 blank5 blank4 blank4"
-    "blank2 blank2 blank5 blank5 blank5 blank5 blank5 blank4 blank4"
-    "blank2 blank2 socials socials socials socials socials blank4 blank4";
-    gap: 0.5em; }
+    "home home nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying time time"
+    "blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2"
+    "blank3 bio bio bio bio bio specs specs specs specs specs blank8"
+    "blank3 projects projects source source source dog dog dog dog dog blank8"
+    "blank5 blank5 blank5 blank5 blank5 blank5 blank5 blank5 blank5 blank5 blank5 blank5"
+    "blank6 socials socials socials socials socials socials socials socials socials socials blank7";
+    gap: 0.7em; }
 
 /* phones */
 @media screen and (max-width: 1550px) {
@@ -53,19 +49,16 @@ main {
     }
     #specs {display: flex; justify-content: space-evenly !important;}
     main {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(10, 100px); 
+      grid-template-columns: repeat(12, 0.083fr);
+      grid-template-rows: 100px 100px 100px 1px 100px 100px 1px;
       grid-template-areas: 
-        "nowplaying nowplaying"
-        "bio bio"
-        "bio bio"
-        "projects source"
-        "specs specs"
-        "specs specs"
-        "dog dog"
-        "socials socials"
-        "socials socials"
-        "time home";
+        "time time time nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying home home home"
+        "bio bio bio bio bio bio specs specs specs specs specs specs"
+        "projects projects projects projects source source source source dog dog dog dog"
+        "blank2 blank2 blank2 blank2 blank3 blank3 blank3 blank3 blank5 blank5 blank5 blank5"
+        "socials socials socials socials socials socials socials socials socials socials socials socials"
+        "socials socials socials socials socials socials socials socials socials socials socials socials"
+        "blank6 blank6 blank6 blank6 blank7 blank7 blank7 blank7 blank8 blank8 blank8 blank8";
     }
     
     #iconbar i{font-size: 60px;}}
@@ -74,22 +67,28 @@ main {
 @media screen and (max-width: 700px) {
 
     #iconbar i{font-size: 35px;}}
+
+#home {
+    border-top: none;
+    border-left: none;}
 #album {
     overflow: hidden;}
 #time {
     text-align: center;
     display: flex;
-    border-bottom-left-radius: 50px;
+    
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+    border-top: none;
+    border-right: none;}
 #nowplayingdiv {
     text-align: center;
     display: flex;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    
     align-items: center;
     justify-content: center;
-    gap: 0.8em;}
+    gap: 0.8em;
+    border-top: none;}
 
 
 .p {
@@ -116,8 +115,6 @@ main {
 #bio {
     position: relative;
     
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
 
     display: flex;
     align-items: center;
@@ -135,15 +132,7 @@ main {
     text-align: center;}
 #bio p {font-size: 20px;}
 
-#projects {
-    border-bottom-left-radius: 50px;}
-#home {
-    border-bottom-right-radius: 50px;}
-#source {
-    border-bottom-right-radius: 50px;}
-#dog {
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;}
+
 
 #iconbar {
     font-size: clamp(20px, 7vw, 50px);text-align: center;}
@@ -207,8 +196,7 @@ main {
     gap: 15px;
     
     font-size: 22px;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+    
 
     position: relative;}
 #wrapper {
@@ -230,8 +218,7 @@ main {
     justify-content: center;
     gap: 50px;
 
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+   
 }
 
 #iconbar i:hover {
