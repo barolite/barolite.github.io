@@ -26,7 +26,7 @@ async function fetchNowPlaying() {
         if (track['@attr'] && track['@attr'].nowplaying === 'true') {
             nowPlayingText.textContent = `${artist} - ${title}`;
         } else {
-            nowPlayingText.textContent = 'nothing';
+            nowPlayingText.textContent = 'nothing rn';
         }
 
         /* album cover part
