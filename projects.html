@@ -4,19 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projects</title>
+
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="projects.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <button id="home" class="div b" target="_blank" onclick="location.href='https://barolite.github.io/'" style="grid-area: home">home</button>
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div id="main" class="wrapper">
+        <h2 style="grid-area: h2">Projects</h2>
+        
+        <div id="projectcolumn">
+            <div class="projectbutton" onclick="location.href='https://barolite.github.io/projects/memory'">
+                <img src="images/memory.png">
+                <div class="buttontitle">Memory</div>
+                <div class="buttondesc">Click the squares that light up</div>
+            </div>
+            <div class="projectbutton" onclick="location.href='https://barolite.github.io/projects/memory2'">
+                <img src="images/memory2.png">
+                <div class="buttontitle">Memory 2</div>
+                <div class="buttondesc">Memory, but harder!</div>
+            </div>
+            <div class="projectbutton" onclick="location.href='https://barolite.github.io/projects/demo1'">
+                <img src="images/product.png">
+                <div class="buttontitle">Product Demo</div>
+                <div class="buttondesc">A demo for a product page</div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div id="projectcolumn">
+            <div class="projectbutton" onclick="location.href='https://www.roblox.com/games/135482777129451/PROXY-Alpha'">
+                <img src="images/proxy_logo.png">
+                <div class="buttontitle">PROXY (ON HOLD)</div>
+                <div class="buttondesc">My Roblox game</div>
+            </div>
+        </div>
+         <div class="divider"></div>
+         <div id="projectcolumn">
+            <div class="projectbutton" onclick="location.href='https://barolite.github.io/projects/aboutversions/v1.html'">
+                <img src="images/snep.gif">
+                <div class="buttontitle">Website v1</div>
+                <div class="buttondesc">The very first version of my About page</div>
+            </div>
+            <div class="projectbutton" onclick="location.href='https://barolite.github.io/projects/aboutversions/v2.html'">
+                <img src="images/v2.jpg">
+                <div class="buttontitle">Website v2</div>
+                <div class="buttondesc">The second version of my About page</div>
+            </div>
+        </div>
+    </div>
+    <div id="buttons">
+        <button class="bwrapper" onclick="location.href='home2.html'" style="grid-area: b1">
+            <div class="profile">
+            <img id="snep" src="images/home.png" alt="home">
 
-    <button class="div b" style="grid-area: demo1" target="_blank" onclick="location.href='https://barolite.github.io/projects/demo1'">demo 1 - product page</button>
-    <button class="div b" style="grid-area: demo2" target="_blank" onclick="location.href='https://barolite.github.io/projects/memory2'"">demo 2 - memory game (easy)</button>
-    <button class="div b" style="grid-area: demo3" target="_blank" onclick="location.href='https://barolite.github.io/projects/memory'">demo 3 - memory game</button>
-    <button class="div b" style="grid-area: roblox"target="_blank" onclick="location.href='https://roblox.com/games/135482777129451/PROXY-Alpha'">roblox game</button>
-    
+                <h1>home</h1>
+            </div>
+        </button>
+        <button class="bwrapper" onclick="location.href='about2.html'">
+            <div class="profile">
+            <img id="snep" src="images/about.png" alt="snep">
+
+                <h1>about me</h1>
+            </div>
+        </button>
+    </div>
 </body>
 </html>
