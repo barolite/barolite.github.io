@@ -131,12 +131,16 @@ body {
     }
 
     .bwrapper {
-        width: 80vw;
+        width: 80vw !important;
     }
 
     .profile img {
         width: 60px;
         height: 60px;
+    }
+
+    .profile h1 {
+        font-size: 0.8em !important;
     }
 
     #footertext {

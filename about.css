@@ -208,7 +208,7 @@
 
 
 
-/* Base adjustments for safer scaling */
+/*media queries boring*/
 html {
     font-size: 1vw;
 }
@@ -281,6 +281,10 @@ html {
         grid-template-columns: 1fr;
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    #status {
+        display: none;
     }
 }
 
