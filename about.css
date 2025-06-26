@@ -1,248 +1,351 @@
 @import url('./colors.css');
 
-body {
-    background-color: var(--base);
-    background-image: url("images/wallpaper.jpg");
-    background-size: cover;
-    font-family: monospace;
-    padding: 0;
-    margin: 0;}
-
-main {
-    display: grid;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    grid-template-columns: 0.6fr 0.4fr repeat(8, 0.12fr) 0.4fr 0.6fr;
-    grid-template-rows: 0.1fr 1fr 1fr 0.17fr 1fr 0.4fr;
-    grid-template-areas: 
-    "home home nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying time time"
-    "blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2"
-    "blank3 bio bio bio bio bio specs specs specs specs specs blank8"
-    "blank3 projects projects source source source dog dog dog dog dog blank8"
-    "blank5 blank5 blank5 blank5 blank5 blank5 blank5 blank5 blank5 blank5 blank5 blank5"
-    "blank6 socials socials socials socials socials socials socials socials socials socials blank7";
-    gap: 0.7em; }
-
-@media screen and (max-width: 1550px) {
-    p {font-size: 10px !important;}
-    button {font-size: 10px !important;}
-    #bio p{font-size: 13px !important;}
-    #wrapper{font-size: 16px;}
-    #socials {flex-direction: column; gap: 0px   !important;}
-    #iconbar i{font-size: 40px;}}
-
-@media screen and (max-width: 1200px) {
-    #bio p {font-size: 11px;}
-    #wrapper{font-size: 11px;}
-    #iconbar i{font-size: 40px;}}
-
-/* phones */
-@media screen and (max-width: 880px) {
-    body {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-
-    }
-    #specs {display: flex; justify-content: space-evenly !important;}
-    main {
-        grid-template-columns: repeat(12, 0.083fr);
-      grid-template-rows: .5fr .5fr 1fr 1fr 1fr .3fr .3fr 1fr 1fr;
-      grid-template-areas: 
-        "home home home nowplaying nowplaying nowplaying nowplaying nowplaying nowplaying time time time"
-        "blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2 blank2"
-        "bio bio bio bio bio bio bio bio bio bio bio bio"
-        "specs specs specs specs specs specs specs specs specs specs specs specs"
-        "projects projects projects projects source source source source dog dog dog dog"
-        "blank3 blank3 blank3 blank3 blank3 blank3 blank5 blank5 blank5 blank5 blank5 blank5"
-        "blank6 blank6 blank6 blank6 blank7 blank7 blank7 blank7 blank8 blank8 blank8 blank8"
-        "socials socials socials socials socials socials socials socials socials socials socials socials"
-        "socials socials socials socials socials socials socials socials socials socials socials socials";
-    }
-    
-    #bio p {
-        font-size: 12px !important;
-        text-align: center;
-    }
-    #iconbar i{font-size: 60px;}}
-  
-
-@media screen and (max-width: 700px) {
-
-    #iconbar i{font-size: 35px;}}
-
-#home {
-    border-top: none;
-    border-left: none;}
-#album {
-    overflow: hidden;}
-#time {
-    text-align: center;
-    display: flex;
-    
-    align-items: center;
-    justify-content: center;
-    border-top: none;
-    border-right: none;}
-#nowplayingdiv {
-    text-align: center;
-    display: flex;
-    
-    align-items: center;
-    justify-content: center;
-    gap: 0.8em;
-    border-top: none;}
-
-
-.p {
-    border: solid 2px var(--surface0); 
-    background-color: var(--tcrust);
-    color: var(--text);;}   
-.p:hover {
-    border-color: var(--lavender);}
-
-.button {
-    border-style: none;
-    font-family: monospace;
-    border: solid 2px var(--surface0);
-    font-weight: 600;}
-.button:hover {
-    border-color: var(--lavender);}
-
-.blank {
-    border: solid 0px var(--surface0); 
-    color: var(--text);}
-.blank:hover {
-    border-color: var(--lavender);}
-
-#bio {
-    position: relative;
-    
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-   
-    
-    padding: 8px;
-    
-    background-color: var(--tcrust);
-  
-    
-    color: var(--text);
-    text-align: center;}
-#bio p {font-size: 20px;}
-
-
-
-#iconbar {
-    font-size: clamp(20px, 7vw, 50px);text-align: center;}
-.fa-discord {
-    color: var(--mauve);}
-.fa-youtube {
-    color: var(--red);}
-.fa-bluesky {
-    color:var(--sky);}
-.fa-tumblr {
-    color:var(--teal);}
-.fa-steam {
-    color:var(--sapphire);}
-.fa-x-twitter {
-    color:var(--text);}
-.fa-spotify {
-    color:var(--green);}
-.fa-github {
-    color:var(--peach);}
-.fa-lastfm {
-    color:var(--maroon);}
-.fa-cube {
-    color:var(--yellow);}
-.fa-envelope {
-    color:var(--lavender);}
-
-#roblox {
-    width: 60px;color: var(--lavender);transform: translateY(7px);}
-
-#pattern {
-    --s: 80px;
-    
-    --g1:conic-gradient(at 37.5% 87.5%,#0000 75%,var(--base) 0);
-    --g2:conic-gradient(at 12.5% 62.5%,#0000 75%,var(--overlay1) 0);
-    background:
-      var(--g2) calc(  var(--s)/4) calc(  var(--s)/4),
-      var(--g2) calc(5*var(--s)/4) calc(5*var(--s)/4),
-      var(--g1),var(--g1) var(--s) var(--s) var(--tcrust);
-    background-size: calc(2*var(--s)) calc(2*var(--s));
-    animation: g15 2s infinite linear;
-  
-    position: relative;}
-@keyframes g15 {
-    to {
-      background-position: 
-        calc(  var(--s)/4) calc( 9*var(--s)/4),
-        calc(5*var(--s)/4) calc(-3*var(--s)/4),
-        0 calc(2*var(--s)),
-        var(--s) calc(-1*var(--s));
-    }}
-
-
-    
-      
-
-#specs {
-    background-color: var(--tcrust);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    
-    font-size: 22px;
-    
-
-    position: relative;}
-#wrapper {
+/*about - main*/
+#abmain {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 40px;
     justify-content: center;
-    line-height: 2em;}
- 
-.fa-debian {
-    font-size: 90px;}
+    gap: 4vh;
+
+    width: 100%;
+}
 
 
-
-#socials {
+/*holds the bio box and buttons next to each other*/
+#ihatedivs {
     display: flex;
+
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+
+/*discord box*/
+.infobox {
+    gap: 50px;
+    align-items: center;
+
+    
+}
+
+/*discord pfp*/
+#pfp {
+    position: relative;
+    border-radius: 40%;
+    border: solid 2px var(--surface0);
+    box-shadow: 4px 4px 10px var(--crust);
+}
+
+/*discord status dot*/
+.status-dot {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #2f3136;
+    border-radius: 40%;
+}
+
+.status-online { background-color: #43b581; }
+.status-idle { background-color: #faa61a; }
+.status-dnd { background-color: #f04747; }
+.status-offline { background-color: #747f8d; }
+
+/*wrapper for all the discord info*/
+#infostuff {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-
    
 }
 
-#iconbar i:hover {
-    transform: scale(1.1);
+/*discord status*/
+#status {
+    text-align: center;
+    font-size: 0.9em;
 }
 
-a:link {
-    color: var(--maroon);
-    text-decoration: none;
+/*wraps the activity and image together*/
+#activitywrapper {
+    display: grid;
+    
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas:
+    "largeimage activity activity"
+    "largeimage details timer";
+    column-gap:8px;
+    width: 100%;
+
+
+}
+
+/*this is kinda redundant but it holds the neofetch-esque bio thing*/
+#fetchwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*ill combine this with infobox eventually*/
+#panel {
+    width: 40vw;
+   
+    padding: 30px;
+}
+
+/*wrapper for the buttons*/
+#ilovedivs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*wrapper for each button*/
+.aboutbwrapper {
+    display: flex;
+    justify-content: center;
+    box-shadow: 4px 4px 10px var(--crust);;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    transition: background-color 0.2s ease;
+    width: 20vw;
+
+    background-color: var(--mantle);
+    color: var(--text);
+    border: solid 2px var(--surface0);
+    font-family: 'JetBrains Mono', monospace;
+}
+.aboutbwrapper:hover {
+    background-color: var(--surface);
+}
+
+/*holds the neofetch-esque bio thing*/
+#biowrapper {
+    padding: 0px;
+}
+
+/*about - wrapper for socials, goes alongside mainwrapper*/
+#socialwrapper {
+    display: flex;
+    flex-direction: column;
+   
+
+    column-gap: 40px;
+    row-gap: 20px;
+    padding-bottom: 20px;;
+}
+#socialwrapper h2 {
     text-align: center;
-  }
-  
-a:visited {
-    color: var(--maroon);
-    text-decoration: none;
-    text-align: center;
-  }
-a:active {
-    color: var(--maroon);
-    text-decoration: none;
-    text-align: center;
-  }
+    
+}
+
+
+
+/*about - columns for the socials buttons*/
+.socialcolumn {
+    display: grid;
+    gap: 10px;
+}
+
+/*about - each column of socials*/
+#c1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "discord reddit"
+    "x bluesky"
+    "email email";
+    padding-left: 80px;
+    padding-right: 80px; 
+}
+
+#c2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "namemc steam"
+    "roblox mktype"
+    "email email";
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+#c3 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "spotify github"
+    "lastfm youtube";
+    padding-left: 80px;
+    padding-right: 80px;  
+}
+
+/*about - each socials button*/
+.iconbar {
+    background-color: var(--surface0);
+    color: var(--text);
+    border: solid 2px var(--surface0);
+    border-radius: 10px;
+    font-family: 'JetBrains Mono', monospace;
+
+    height: 50px;
+   
+    font-size: larger;
+    text-align: left;
+
+    transition: scale 0.1s ease-in-out, border-color 0.1s ease-in-out;
+    
+}
+
+/*about - the icons on each socials button*/
+.icon {
+    margin-left: 5px;
+}
+
+
+
+/* Base adjustments for safer scaling */
+html {
+    font-size: 1vw;
+}
+
+@media (max-width: 1400px) {
+    body {
+        gap: 2vh;
+    }
+    
+    #panel, .aboutbwrapper {
+        width: 50vw;
+    }
+    #fetchwrapper {
+        width: 30vw;
+    }
+    .iconbar {
+        height: 40px;
+    }
+    #c1 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #c2 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #c3 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .aboutbwrapper {
+        width: 20vw;
+    }
+}
+
+@media (max-width: 1100px) {
+    #ihatedivs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #panel, #fetchwrapper, .aboutbwrapper {
+        width: 60vw !important;
+    }
+
+    #activitywrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "largeimage"
+            "activity"
+            "details"
+            "timer";
+    }
+
+    #socialwrapper {
+        height: 100% !important;
+    }
+    .socialcolumn {
+        height: 100% !important;
+    }
+    .iconbar {
+        height: 100%;
+    }
+    .aboutbwrapper {
+        width: 60vw;
+        margin: 10px 0;
+    }
+
+    #c1, #c2, #c3 {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 14px;
+    }
+
+    #abmain {
+        flex-direction: column;
+    }
+
+    #socialwrapper {
+        row-gap: 10px;
+    }
+
+    #pfp {
+        width: 80px;
+        height: 80px;
+    }
+
+    #status {
+        font-size: 0.8em;
+    }
+
+    .iconbar {
+        font-size: medium;
+        height: auto;
+        padding: 10px;
+    }
+
+    #panel {
+        padding: 15px;
+        max-height: none;
+    }
+}
+
+@media (max-width: 500px), (max-zoom: 150%) {
+    html {
+        font-size: 16px;
+    }
+
+    #ihatedivs {
+        flex-direction: column;
+    }
+
+    .aboutbwrapper {
+        width: 90vw;
+    }
+
+    #socialwrapper {
+        padding: 0 10px;
+    }
+
+    .iconbar {
+        font-size: small;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #panel, #fetchwrapper {
+        width: 100%;
+    }
+
+    #largeimage2 {
+        width: 100% !important;
+    }
+}
