@@ -1,0 +1,84 @@
+@import url('./colors.css');
+
+.fa-discord {
+    color: var(--blue);
+}
+.fa-youtube {
+    color: var(--red);
+}
+.fa-bluesky {
+    color:var(--sky);
+}
+.fa-tumblr {
+    color:var(--teal);
+}
+.fa-steam {
+    color:var(--blue);
+}
+.fa-x-twitter {
+    color:var(--text);
+}
+.fa-spotify {
+    color:var(--green);
+}
+.fa-github {
+    color:var(--text);
+}
+.fa-lastfm {
+    color:var(--maroon);
+}
+.fa-cube {
+    color:var(--yellow);
+}
+.fa-envelope {
+    color:var(--flamingo);
+}
+.fa-gamepad {
+    color:var(--lavender);
+}
+.fa-reddit {
+    color:var(--peach);
+}
+
+
+#red:hover {
+    scale: 1.04;
+    border-color: var(--red);
+}
+#flamingo:hover {
+    scale: 1.04;
+    border-color: var(--flamingo);
+}
+#blue:hover {
+    scale: 1.04;
+    border-color: var(--blue);
+}
+#sky:hover {
+    scale: 1.04;
+    border-color: var(--sky);
+}
+#green:hover {
+    scale: 1.04;
+    border-color: var(--green);
+}
+#peach:hover {
+    scale: 1.04;
+    border-color: var(--peach);
+
+}
+#maroon:hover {
+    scale: 1.04;
+    border-color: var(--maroon);
+}
+#lavender:hover {
+    scale: 1.04;
+    border-color: var(--lavender);
+}
+#yellow:hover {
+    scale: 1.04;
+    border-color: var(--yellow);
+}
+#white:hover {
+    scale: 1.04;
+    border-color: var(--text);
+}
