@@ -3,34 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>barolite</title>
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/0c8ff4ec4c.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>home</title>
 </head>
 <body>
-    
-    <div class="Top">
-        <div class="home">
-            <button onclick="location.href='https://barolite.github.io'"id="home">Home</button>  
-        </div>   
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-    
-    <div class="content">
-        <div class="welcome">
-            <div class="welcome2"><strong>Welcome</strong></div>
+    <div id="header">
+        <div class="p" id="time" style="grid-area: time">Time</div>
+    </div>
+    <div id="main">
+        <div id="mainwrapper">
+            <img id="long" src="images/long.avif" alt="snowgif">
+            <div class="wrapper">
+                <p id="welcome">welcome to my site, forever work in progress</p>
+            </div>
         </div>
-        <div class="iconbar">
-            <div class="buttons">
-                <button onclick="location.href='https://barolite.github.io/about'">About</button> 
-                <button onclick="location.href='https://barolite.github.io/projects'">Projects</button>
-                <button onclick="location.href='https://barolite.github.io/dog'">???</button>
-            </div>        
-            <div id="wip">Work in progress.</div>
+        <div id="buttonwrapper">
+            <button class="bwrapper" onclick="location.href='https://barolite.github.io/about'">
+                <div class="profile">
+                <img id="snep" src="images/about.png" alt="snep">
+
+                    <h1>about me</h1>
+                </div>
+            </button>
+            <button class="bwrapper" onclick="location.href='https://barolite.github.io/projects'">
+                <div class="profile">
+                    <img id="snep" src="images/projects.png" alt="thingy">
+
+                    <h1>projects</h1>
+                </div>
+            </button>
+            <button class="bwrapper" onclick="location.href='https://barolite.github.io/dog'">
+                <div class="profile">
+                    <img id="snep" src="images/dog.png" alt="thingy">
+
+                    <h1>???</h1>
+                </div>
+            </button>
         </div>
     </div>
+    <div id="footer">
+        <div class="p" id="footertext">Photo by <a href="https://unsplash.com/@veloradio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rapha Wilde</a> on <a href="https://unsplash.com/photos/a-snow-leopard-laying-on-top-of-a-rock-5iJ-ncwRqOI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+    <script src="scripts/time.js"></script>
 </body>
-</html> 
+</html>
