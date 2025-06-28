@@ -158,7 +158,7 @@
 #c1 {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    "discord reddit"
+    "discord tumblr"
     "x bluesky"
     "email email";
     padding-left: 80px;
@@ -278,7 +278,6 @@ html {
     }
 
     #c1, #c2, #c3 {
-        grid-template-columns: 1fr;
         padding-left: 20px;
         padding-right: 20px;
     }
