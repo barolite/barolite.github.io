@@ -41,6 +41,11 @@
 }
 
 
+#teal:hover {
+    scale: 1.04;
+    border-color: var(--teal);
+}
+
 #red:hover {
     scale: 1.04;
     border-color: var(--red);
