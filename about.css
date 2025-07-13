@@ -146,6 +146,47 @@
     
 }
 
+/*about - links*/
+span > a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+span > a:hover {
+    color: var(--mauve);
+    text-decoration: none;
+}
+
+span > a:active {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+span > a:visited {
+    color: var(--text);
+    text-decoration: none;
+}
+
+/*about - links but with classes just in case the first one doesn't work*/
+.favorite {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.favorite:hover {
+    color: var(--mauve);
+    text-decoration: none;
+}
+
+.favorite:active {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.favorite:visited {
+    color: var(--text);
+    text-decoration: none;
+}
 
 
 /*about - columns for the socials buttons*/
@@ -158,9 +199,8 @@
 #c1 {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    "discord tumblr"
-    "x bluesky"
-    "email email";
+    "discord email"
+    "x bluesky";
     padding-left: 80px;
     padding-right: 80px; 
 }
