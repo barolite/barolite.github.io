@@ -39,6 +39,9 @@
 .fa-reddit {
     color:var(--peach);
 }
+.fa-wrench {
+    color:var(--green);
+}
 
 
 #teal:hover {
@@ -62,7 +65,7 @@
     scale: 1.04;
     border-color: var(--sky);
 }
-#green:hover {
+.green:hover {
     scale: 1.04;
     border-color: var(--green);
 }
