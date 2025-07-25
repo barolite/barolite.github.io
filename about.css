@@ -210,7 +210,7 @@ span > a:visited {
     grid-template-areas: 
     "namemc steam"
     "roblox mktype"
-    "email email";
+    "vrc modrinth";
     padding-left: 80px;
     padding-right: 80px;
 }
