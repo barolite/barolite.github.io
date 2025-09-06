@@ -200,7 +200,8 @@ span > a:visited {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "discord email"
-    "x bluesky";
+    "spotify github"
+    "lastfm youtube";
     padding-left: 80px;
     padding-right: 80px; 
 }
@@ -215,14 +216,14 @@ span > a:visited {
     padding-right: 80px;
 }
 
-#c3 {
+/*#c3 {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "spotify github"
     "lastfm youtube";
     padding-left: 80px;
     padding-right: 80px;  
-}
+}*/
 
 /*about - each socials button*/
 .iconbar {
