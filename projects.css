@@ -10,7 +10,7 @@
     width: 80%;
 }
 
-#projectcolumn {
+.projectcolumn {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -35,6 +35,7 @@
     border-radius: 15px;
 
     overflow: hidden;
+    max-width: 400px;
 }
 .projectbutton:hover {
     scale: 1.02;
