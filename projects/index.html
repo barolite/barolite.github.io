@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h2 style="grid-area: h2">Projects</h2>
+        <div id="projects">
+        <div class="projectcolumn" id="sites" style="grid-area: sites">
+            <h2>Web Projects</h2>
+            <div class="projectbutton" onclick="location.href='https://barolite.github.io/projects/memory'">
+                <img class="projectimg" src="img/memory.png">
+                <div id="buttonwords">
+                <div class="buttontitle">Memory</div>
+                <div class="buttondesc">Click the squares that light up</div>
+                </div>
+            </div>
+            <div class="projectbutton" onclick="location.href='https://barolite.github.io/projects/memory2'">
+                <img class="projectimg" src="img/memory2.png">
+                <div id="buttonwords">
+                <div class="buttontitle">Memory 2</div>
+                <div class="buttondesc">Memory, but harder! Experiment with css-grid and JS.</div>
+                </div>
+            </div>
+            <div class="projectbutton" onclick="location.href='https://barolite.github.io/projects/demo1'">
+                <img class="projectimg" src="img/product.png">
+                <div id="buttonwords">
+                <div class="buttontitle">Product Demo</div>
+                <div class="buttondesc">A mockup for a product/advertising page. Inspired by <a target="_blank" href="https://www.debian.org/">Debian's website</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="projectcolumn" id="games" style="grid-area: games">
+            <h2>Contributed To</h2>
+            <div class="projectbutton" onclick="location.href='https://www.roblox.com/games/135482777129451/PROXY-Alpha'">
+                <img class="projectimg" src="img/proxy_logo.png">
+                <div id="buttonwords">
+                <div class="buttontitle">PROXY</div>
+                <div class="buttondesc">My Roblox game, on indefinite hiatus</div>
+                </div>
+            </div>
+            <div class="projectbutton" onclick="location.href='https://gunsoffortune.neocities.org/'">
+                <img class="projectimg" src="img/gof.png">
+                <div id="buttonwords">
+                <div class="buttontitle">Guns of Fortune</div>
+                <div class="buttondesc">Webcomic by Meepma and Lonk2018, I designed the website and hosted it on <a target="_blank" href="https://www.neocities.org">Neocities</a></div>
+                </div>
+            </div>
+        </div>
+         <div class="projectcolumn" id="versions" style="grid-area: versions">
+            <h2>Website Versions</h2>
+            <div class="projectbutton" onclick="location.href='https://barolite.github.io/projects/aboutversions/v1.html'">
+                <img class="projectimg" src="img/snep.gif">
+                <div id="buttonwords">
+                <div class="buttontitle">Website v1</div>
+                <div class="buttondesc">The very first version of my About page</div>
+                </div>
+            </div>
+            <div class="projectbutton" onclick="location.href='https://barolite.github.io/projects/aboutversions/v2.html'">
+                <img class="projectimg" src="img/v2.jpg">
+                <div id="buttonwords">
+                <div class="buttontitle">Website v2</div>
+                <div class="buttondesc">The second version of my About page</div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div id="buttons">
+        <button class="bwrapper" onclick="location.href='../'" style="grid-area: b1">
+            <div class="profile">
+            <img id="snep" src="../img/home.png" alt="home">
+
+                <h1>home</h1>
+            </div>
+        </button>
+        <button class="bwrapper" onclick="location.href='../about'">
+            <div class="profile">
+            <img id="snep" src="../img/about.png" alt="snep">
+
+                <h1>about me</h1>
+            </div>
+        </button>
+    </main>
+</body>
+</html>

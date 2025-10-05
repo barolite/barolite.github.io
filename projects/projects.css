@@ -1,0 +1,144 @@
+@import url('css/colors.css');
+
+a {
+    color: var(--sky);
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "sites games"
+        "versions versions";
+}
+
+.projectcolumn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+}
+
+
+.projectbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    
+    cursor: pointer;
+    transition: scale 0.1s ease-in-out;
+    background-color: var(--tmantle);
+    border: solid 2px var(--surface0);
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+.projectbutton:hover {
+    scale: 1.02;
+}
+
+.buttontitle {
+    text-align: right;
+    font-size: 1.2rem;
+    color: var(--text);
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.buttondesc {
+    font-style: italic;
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--subtext1);
+    padding-right: 1rem;
+}
+
+img {
+    width: 250px;
+    height: 150px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    object-fit: cover;
+}
+
+
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+@media (max-width: 1170px) {
+    .projectbutton {
+        width: 100%;
+    
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .buttontitle {
+        font-size: 1rem;
+    }
+    .buttondesc {
+        font-size: 0.7rem;
+    }
+    .bwrapper {
+        width: 50vw;
+    }
+    #buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        height: 215dvh;
+        margin: 0;
+        padding: 0;
+    }
+    main {
+        width: 100%;
+        border: 0px solid transparent;
+    }
+    .divider {
+        display: none;
+    }
+
+    #projects {
+        grid-template-areas: 
+        "sites"
+        "games"
+        "versions";
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    .projectbutton {
+        width: 60vw;
+    }
+}
