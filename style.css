@@ -1,6 +1,17 @@
-@import url('./colors.css');
+@import url('css/colors.css');
+
+body {
+    height: 100dvh;
+}
 
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8vh;
+}
 
 /*home - main*/
 #main {
@@ -10,7 +21,9 @@
     justify-content: center;
     gap: 5vh;
 
+    
     width: 100%;
+    
 }
 
 /*home - about me paragraph*/
@@ -32,25 +45,6 @@
     justify-content: center;
 }
 
-/*home - wrapper for each button*/
-.bwrapper {
-    display: flex;
-    justify-content: center;
-    box-shadow: 4px 4px 10px var(--crust);;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 10px;
-    transition: background-color 0.2s ease;
-    width: 20vw;
-
-    background-color: var(--mantle);
-    color: var(--text);
-    border: solid 2px var(--surface0);
-    font-family: 'JetBrains Mono', monospace;
-}
-.bwrapper:hover {
-    background-color: var(--surface);
-}
 
 
 
@@ -61,5 +55,25 @@
     .profile h1 {
         font-size: 1em;
     }
+
 }
 
+@media (max-width: 768px) {
+    body {
+        height: 100dvh;
+        margin: 0;
+        padding: 0;
+    }
+    main {
+        width: 100%;
+        border: transparent;
+    }
+    .profile img {
+        width: 60px;
+        height: 60px;
+    }
+    .profile h1 {
+       display: none; 
+    }
+
+}
