@@ -1,0 +1,482 @@
+@import url("./colors.css");
+
+body {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "panel  panel"
+    "aboutton  socials";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: stretch;
+  align-items: stretch;
+  height: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  width: 80vw;
+}
+
+#aboutton {
+  grid-area: aboutton;
+  display: grid;
+  grid-template-areas:
+    "aboutme aboutme"
+    "b1 b2";
+  overflow: hidden;
+  grid-template-rows: auto 0.1fr;
+}
+
+#pfp {
+  position: relative;
+  border-radius: 40%;
+  border: solid 2px var(--surface0);
+  box-shadow: 4px 4px 10px var(--crust);
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #2f3136;
+  border-radius: 40%;
+}
+
+.status-online {
+  background-color: #43b581;
+}
+.status-idle {
+  background-color: #faa61a;
+}
+.status-dnd {
+  background-color: #f04747;
+}
+.status-offline {
+  background-color: #747f8d;
+}
+
+#infostuff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#status {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+#activitywrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-areas:
+    "largeimage activity activity"
+    "largeimage details timer";
+  column-gap: 8px;
+  width: 100%;
+}
+
+#imagewrapper:hover {
+  transform: rotate(5deg) scale(1.1);
+  cursor: pointer;
+}
+
+#panel {
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  gap: 5vw;
+  justify-content: center;
+  grid-area: panel;
+}
+
+#buttonwrap {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+
+.aboutbwrapper {
+  max-width: 15vw;
+  align-self: center;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.hide {
+  display: none;
+  font-size: smaller;
+}
+
+#linuxricing:hover + .hide {
+  display: block;
+  color: var(--text2);
+}
+#socialwrapper {
+  display: flex;
+  flex-direction: column;
+  column-gap: 40px;
+  row-gap: 20px;
+  padding: 1vw;
+  grid-area: socials;
+}
+
+#socialwrapper h2 {
+  text-align: center;
+}
+
+#youtubea, #youtubea:visited {
+  color: var(--red);
+}
+#snepa, #snepa:visited {
+  color: var(--text2);
+}
+#bandcampa, #bandcampa:visited {
+  color: var(--sky);
+}
+
+
+a:hover {
+  color: var(--text2);
+}
+
+a:active {
+  color: var(--text2);
+}
+
+
+
+.favorite {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.favorite:hover {
+  color: var(--mauve);
+  text-decoration: none;
+}
+
+.favorite:active {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.favorite:visited {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.socialcolumn {
+  display: grid;
+  gap: 10px;
+}
+
+#c1 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "discord bandcamp"
+    "spotify github"
+    "lastfm youtube"
+    "x rym";
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#c2 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "namemc steam"
+    "roblox mktype"
+    "letterboxd modrinth";
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.iconbar {
+  background-color: var(--crust);
+  color: var(--text);
+  border: solid 2px var(--surface0);
+  border-radius: 10px;
+  height: 5vh;
+  font-size: 1rem;
+  text-align: left;
+  transition: scale 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+.iconbar:hover {
+  cursor: pointer;
+}
+
+.icon {
+  margin-left: 5px;
+}
+
+/* media queries bad */
+html {
+  font-size: 1vw;
+}
+
+/* for zooming */
+@media (max-width: 1400px) {
+  html {
+    font-size: 1.2vw;
+  }
+
+  #socialwrapper {
+    row-gap: 15px;
+  }
+
+  .iconbar {
+    height: 5vh;
+    font-size: 1rem;
+  }
+}
+
+/*  intermediate 1 */
+@media (max-width: 1400px) and (orientation: landscape) {
+  html {
+    font-size: 1.4vw;
+  }
+
+  body {
+    height: 150dvh;
+  }
+
+  main {
+    grid-template-areas:
+      "panel socials"
+      "aboutton socials";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 0.7fr;
+    width: 90vw;
+  }
+
+  #aboutton {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #activitywrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "largeimage"
+      "activity"
+      "details"
+      "timer";
+  }
+  #details,
+  #largeimage {
+    display: none !important;
+  }
+
+  .socialcolumn {
+    height: 100%;
+  }
+
+  .iconbar {
+    height: 70px;
+  }
+
+  .aboutbwrapper {
+    max-width: 100%;
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  #c1,
+  #c2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #status {
+    display: block;
+  }
+}
+
+/* intermediate 2 */
+@media (max-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    height: auto;
+    min-height: 100dvh;
+    padding: 20px 0;
+  }
+
+  main {
+    width: 95vw;
+    height: auto;
+    min-height: 90vh;
+    grid-template-areas:
+      "panel"
+      "aboutton"
+      "socials";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  #panel {
+    padding: 20px;
+    height: auto;
+    min-height: 200px;
+  }
+
+  #aboutton {
+    grid-template-areas:
+      "aboutme"
+      "b1"
+      "b2";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 15px;
+  }
+
+  .aboutbwrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #socialwrapper {
+    row-gap: 15px;
+    padding: 15px;
+  }
+
+  #pfp {
+    width: 100px;
+    height: 100px;
+  }
+
+  .status-dot {
+    width: 18px;
+    height: 18px;
+    bottom: 3px;
+    right: 3px;
+  }
+
+  #status {
+    font-size: 0.9em;
+  }
+
+  .iconbar {
+    font-size: 1rem;
+    height: auto;
+    min-height: 45px;
+    padding: 12px 10px;
+  }
+
+  #c1,
+  #c2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* phones */
+@media (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    padding: 10px 0;
+  }
+
+  main {
+    width: 98vw;
+    border-radius: 8px;
+  }
+
+  #panel {
+    flex-direction: column;
+    padding: 15px;
+    gap: 3vw;
+  }
+
+  #aboutton {
+    padding: 10px;
+  }
+
+  .aboutbwrapper {
+    width: 100%;
+  }
+
+  #socialwrapper {
+    padding: 10px;
+    row-gap: 12px;
+  }
+
+  #pfp {
+    width: 80px;
+    height: 80px;
+  }
+
+  .status-dot {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #2f3136;
+  }
+
+  .iconbar {
+    font-size: 0.95rem;
+    min-height: 42px;
+    padding: 10px 8px;
+  }
+
+  .icon {
+    margin-left: 4px;
+  }
+
+  #c1,
+  #c2 {
+    gap: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #largeimage {
+    max-width: 80px !important;
+  }
+}
+
+/* teeny phones */
+@media (max-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+
+  main {
+    width: 100vw;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  #pfp {
+    width: 70px;
+    height: 70px;
+  }
+
+  .iconbar {
+    font-size: 0.9rem;
+    min-height: 40px;
+    padding: 8px 6px;
+  }
+
+  #c1,
+  #c2 {
+    gap: 6px;
+  }
+}

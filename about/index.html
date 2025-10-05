@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/0c8ff4ec4c.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../css/icons.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <title>about me</title>
+</head>
+<body>
+    <main>
+    
+        <div id="panel" class="wrapper infobox" >
+            <img id="largeimage2" style="width: 1500px; object-fit: cover; object-position: center; position: absolute; z-index: 0; filter: blur(2px) brightness(40%); border-radius: 8px;"">
+            <div id="imagewrapper" style="position: relative; transition: transform 0.2s ease;" onclick="location.href='https://discord.com/users/707094670588641400'">
+                <img id="pfp" src="" alt="profile picture">
+                <span id="status-dot" class="status-dot status-offline"></span>
+            </div>
+            <div id="infostuff" style="z-index: 1;">
+                <p id="status"></p>
+                <div id="divider"></div>
+                <div id="activitywrapper">
+                    <img id="largeimage" src="" alt="activity image" style="margin-top:10px; max-width:100px; border-radius:8px; display:none; grid-area: largeimage;">
+                    <p id="activity" style="grid-area: activity"></p>
+                    <p id="details" class="smalltext" style="grid-area: details"></p>
+                    <p id="timer" style="grid-area: timer; font-size: small; font-weight: bold; color: var(--green); text-align: right;"></p>
+                </div>
+            </div>  
+        </div>
+        <div id="aboutton" class="wrapper">
+            <div id="aboutme" style="grid-area: aboutme;">
+                <h3>About Me</h3>
+                <p>- 17 year old from california, he/him</p>
+                <p>- hobbies include coding, music production, some videogames, and linux <span id="linuxricing" style="color: var(--green); text-decoration: underline; cursor: pointer;">ricing</span><span class="hide">ricing - customizing a car or desktop (sometimes too much)</span></p>
+                
+                
+                <p>- music can be found on my <a id="youtubea" target="_blank" href="https://youtube.com/@barolite">youtube</a> and <a id="bandcampa" target="_blank" href="https://barolite.bandcamp.com">bandcamp</a> (soon)</p>
+                <p>- i am currently learning javascript, tailwind css and drawing</p>
+                <p>- some things i like are cooking, night in the woods, ambient music, <a id="snepa" target="_blank" href="https://homph.snowme.ws/">snow leopards</a>, winter, and graphic design</p>
+                
+                
+            </div>    
+            <button class="bwrapper aboutbwrapper" onclick="location.href='../'" style="grid-area: b1">
+                <div class="profile">
+                <img id="snep" src="../img/home.png" alt="home">
+
+                    home
+                </div>
+            </button>
+            <button class="bwrapper aboutbwrapper" style="grid-area: b2" onclick="location.href='../projects'">
+                <div class="profile">
+                    <img id="snep" src="../img/projects.png" alt="projects">
+
+                    projects
+                </div>
+            </button>
+        </div>
+        <div id="socialwrapper" class="wrapper">
+            <h2 style="grid-area: h2">Socials</h2>
+            <div class="socialcolumn" id="c1" style="grid-area: c1">
+                <button id="blue" class="iconbar" target="_blank" onclick="location.href='https://discord.com/users/707094670588641400'" style="grid-area: discord">
+                    <i class="fa-brands fa-discord icon"></i>
+                    Discord
+                </button>
+                <button id="white" class="iconbar" target="_blank" onclick="location.href='https://x.com/barolite'" style="grid-area: x">
+                    <i class="fa-brands fa-x-twitter icon"></i>
+                    Twitter
+                </button>
+                <button id="pink" class="iconbar" target="_blank" onclick="location.href='https://rateyourmusic.com/~barolite'" style="grid-area: rym">
+                    <i class="fa-solid fa-record-vinyl icon"></i>
+                    RateYourMusic
+                </button>
+                <!--<button id="sky" class="iconbar" target="_blank" onclick="location.href='https://bsky.app/profile/barolite.bsky.social'" style="grid-area: bluesky">
+                    <i class="fa-brands fa-bluesky icon"></i>
+                    Bluesky
+                </button>
+                <button id="teal" class="iconbar" target="_blank" onclick="location.href='https://barolite.tumblr.com/'" style="grid-area: tumblr">
+                    <i class="fa-brands fa-tumblr icon"></i>
+                    Tumblr
+                </button>-->
+                <button id="sky" class="iconbar" target="_blank" onclick="location.href='https://barolite.bandcamp.com'" style="grid-area: bandcamp">
+                    <i class="fa-brands fa-bandcamp icon"></i>
+                    Bandcamp
+                </button>
+                <button class="iconbar green" target="_blank" onclick="location.href='https://open.spotify.com/user/31nwv5jek6owxuiphuxyby3slmji'" style="grid-area: spotify">
+                    <i class="fa-brands fa-spotify icon"></i>
+                    Spotify
+                </button>
+                <button id="white" class="iconbar" target="_blank" onclick="location.href='https://github.com/barolite'" style="grid-area: github">
+                <i class="fa-brands fa-github icon"></i>
+                    Github
+                </button>
+                <button id="maroon" class="iconbar" target="_blank" onclick="location.href='https://www.last.fm/user/barolite'" style="grid-area: lastfm">
+                <i class="fa-brands fa-lastfm icon"></i>
+                    LastFM
+                </button>
+                <button id="red" class="iconbar" target="_blank" onclick="location.href='https://www.youtube.com/@barolite'" style="grid-area: youtube">
+                <i class="fa-brands fa-youtube icon"></i>
+                    YouTube
+                </button>
+            </div>
+            <div class="divider"></div>
+            <div class="socialcolumn" id="c2" style="grid-area: c2">
+                <button id="yellow" class="iconbar" target="_blank" onclick="location.href='https://namemc.com/profile/barolite.1'" style="grid-area: namemc">
+                    <i class="fa-solid fa-cube icon"></i>
+                    NameMC
+                </button>
+                <button id="blue" class="iconbar" target="_blank" onclick="location.href='https://steamcommunity.com/id/barolite'" style="grid-area: steam">
+                    <i class="fa-brands fa-steam icon"></i>
+                    Steam
+                </button>
+                <button id="lavender" class="iconbar" target="_blank" onclick="location.href='https://www.roblox.com/users/2243315847/profile'" style="grid-area: roblox">
+                    <i class="fa-solid fa-gamepad icon"></i>
+                    Roblox
+                </button>
+                <button id="white" class="iconbar" target="_blank" onclick="location.href='https://monkeytype.com/profile/barolite'" style="grid-area: mktype">
+                    <i class="fa-solid fa-keyboard icon"></i>
+                    Monkeytype
+                </button>
+                <!--<button id="white" class="iconbar" target="_blank" onclick="location.href='https://vrchat.com/home/user/usr_45b3b731-7190-45ba-966c-13a203345ddb'" style="grid-area: vrc">
+                    <i class="fa-solid fa-vr-cardboard icon"></i>
+                    VRChat
+                </button>-->
+                <button class="iconbar green" target="_blank" onclick="location.href='https://modrinth.com/user/barolite'" style="grid-area: modrinth">
+                    <i class="fa-solid fa-wrench icon"></i>
+                    Modrinth
+                </button>
+                <button class="iconbar peach" target="_blank" onclick="location.href='https://letterboxd.com/barolite/'" style="grid-area: letterboxd">
+                    <i class="fa-brands fa-letterboxd icon"></i>
+                    Letterboxd
+                </button>
+            </div>
+            <!--<div class="divider"></div>
+            <div class="socialcolumn" id="c3" style="grid-area: c3">
+            </div>-->
+        </div>
+    
+    </main>
+    <!--<script src="scripts/music.js"></script>-->
+    <script src="../scripts/time.js"></script>
+    <script src="../scripts/discord.js"></script>
+</body>
