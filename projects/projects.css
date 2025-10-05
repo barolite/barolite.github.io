@@ -117,7 +117,7 @@ img {
 }
 @media (max-width: 768px) {
     body {
-        height: 215dvh;
+        height: 500dvh;
         margin: 0;
         padding: 0;
     }
