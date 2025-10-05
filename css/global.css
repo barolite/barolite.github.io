@@ -1,0 +1,187 @@
+@import url('colors.css');
+
+body {
+      background: url('../img/Cloudsday.jpg') no-repeat center center / cover;
+    background-color: #28283e;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: center;
+
+
+    margin: 0;
+}
+
+main {
+    
+    width: 80%;
+    height: 100%;
+    background: rgba(0,0,0, 0.25); /* Semi-transparent background */
+  backdrop-filter: blur(10px) brightness(0.75); /* Blur and saturation for the background content */
+  border-left: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for definition */
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for definition */
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2); /* Soft shadow for depth */
+}
+
+
+
+
+
+/*global - header*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    backdrop-filter: blur;
+
+    font-weight: bold;
+}
+
+/*global - wrapper*/
+.wrapper {
+    display: flex;
+    
+    /*box-shadow: 4px 4px 10px white;*/
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    transition: background-color 0.2s ease;
+
+    border: solid 1px var(--surface0);
+    background-color: var(--tmantle);
+    color: var(--text);
+   
+    font-family: 'JetBrains Mono', monospace;
+}
+.wrapper:hover {
+    border-color: var(--surface1);
+}
+
+.smalltext {
+    font-size: small;
+
+}
+
+/*about - everything left to the socials*/
+#mainwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+/*home - wrapper for each button*/
+.bwrapper {
+    display: flex;
+    justify-content: center;
+    box-shadow: 4px 4px 10px var(--crust);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    transition: border-color 0.2s ease;
+    width: 20vw;
+
+    background-color: var(--crust);
+    color: var(--text);
+    border: solid 2px var(--surface0);
+    font-family: 'JetBrains Mono', monospace;
+}
+.bwrapper:hover {
+    border-color: var(--text);
+    cursor:pointer;
+}
+
+/*home - button image and text*/
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
+    border: solid 2px var(--surface0);
+}
+.profile img:hover {
+    transform: rotate(5deg) scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/*about - aesthetic divider*/
+.divider {
+    border: solid 1px var(--surface1);
+    width: 70%;
+    align-self: center;
+    border-radius: 50%;
+}
+
+/*about - aesthetic divider but lighter*/
+#divider {
+    border: solid 1px var(--subtext0);
+    width: 80%;
+    align-self: center;
+    border-radius: 50%;
+
+}
+
+/*global - footertext*/
+#footertext {
+    font-size: 1em;
+    color: var(--subtext0);
+    text-align: center;
+    margin-bottom: 5px;
+}
+#footertext a {
+    color: var(--sapphire);
+    text-decoration: none;
+}
+
+/* Tablet (768px and down), Mobile (480px and down) */
+/*@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        gap: 4vh;
+        padding: 10px;
+    }
+
+    #mainwrapper {
+        width: 90%;
+    }
+
+    #long {
+        width: 100%;
+        height: auto;
+    }
+
+    .wrapper {
+        width: 90vw;
+        font-size: 0.9em;
+    }
+
+    #buttonwrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bwrapper {
+        width: 80vw !important;
+    }
+
+    .profile img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile h1 {
+        font-size: 0.8em !important;
+    }
+
+    #footertext {
+        font-size: 0.85em;
+        padding: 0 10px;
+    }
+}*/

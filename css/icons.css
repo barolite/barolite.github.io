@@ -1,4 +1,4 @@
-@import url('./colors.css');
+@import url('colors.css');
 
 .fa-discord {
     color: var(--blue);
@@ -44,6 +44,12 @@
 }
 .fa-bandcamp {
     color:var(--sky);
+}
+.fa-letterboxd {
+    color:var(--peach);
+}
+.fa-record-vinyl {
+    color:var(--pink);
 }
 
 
@@ -92,4 +98,12 @@
 #white:hover {
     scale: 1.04;
     border-color: var(--text);
+}
+.peach:hover {
+    scale: 1.04;
+    border-color: var(--peach);
+}
+#pink:hover {
+    scale: 1.04;
+    border-color: var(--pink);
 }
