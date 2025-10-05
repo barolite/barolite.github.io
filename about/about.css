@@ -1,4 +1,4 @@
-@import url("./colors.css");
+@import url("../css/colors.css");
 
 body {
   height: 100dvh;
@@ -210,6 +210,7 @@ a:active {
   font-size: 1rem;
   text-align: left;
   transition: scale 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .iconbar:hover {
