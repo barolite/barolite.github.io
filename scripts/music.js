@@ -1,5 +1,6 @@
 
 const nowPlayingText = document.getElementById('nowplaying');
+
 //const playingorno = document.getElementById('playingorno');
 //const albumCoverDiv = document.getElementById('album');
 
@@ -23,10 +24,10 @@ async function fetchNowPlaying() {
         } else {
             playingorno.textContent = '';
         }*/
-        if (track['@attr'] && track['@attr'].nowplaying === 'true') {
-            nowPlayingText.textContent = `${artist} - ${title}`;
+        if (track['@attr'] && track['@attr'].nowplaying === 'true' && !spotify) {
+            nowPlayingText.textContent = `listening to ${artist} - ${title} via last.fm`;
         } else {
-            nowPlayingText.textContent = 'nothing rn';
+            nowPlayingText.textContent = '';
         }
 
         /* album cover part
