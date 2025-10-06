@@ -41,7 +41,7 @@ main {
 
 .status-dot {
   position: absolute;
-  bottom: 5px;
+  bottom: 25px;
   right: 5px;
   width: 20px;
   height: 20px;
@@ -74,6 +74,29 @@ main {
   font-size: 0.9em;
 }
 
+#badge {
+  z-index: 100;
+  display: flex;
+  background-color: var(--base);
+  gap: 0.3rem;
+  justify-content: space_between;
+  padding-left: 0.25rem;
+  border-radius: 5px;
+  height: 20px;
+  align-items: center;
+}
+
+#badgewrap {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  background-color: var(--surface0);
+  padding-left: 0.25rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-right: 0.25rem;
+}
+
 #activitywrapper {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
@@ -87,6 +110,16 @@ main {
 #imagewrapper:hover {
   transform: rotate(5deg) scale(1.1);
   cursor: pointer;
+}
+
+#largeimage2 {
+  width: 1500px;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  z-index: 0;
+  filter: blur(2px) brightness(40%);
+  border-radius: 8px;
 }
 
 #panel {
@@ -134,16 +167,18 @@ main {
   text-align: center;
 }
 
-#youtubea, #youtubea:visited {
+#youtubea,
+#youtubea:visited {
   color: var(--red);
 }
-#snepa, #snepa:visited {
+#snepa,
+#snepa:visited {
   color: var(--text2);
 }
-#bandcampa, #bandcampa:visited {
+#bandcampa,
+#bandcampa:visited {
   color: var(--sky);
 }
-
 
 a:hover {
   color: var(--text2);
@@ -152,8 +187,6 @@ a:hover {
 a:active {
   color: var(--text2);
 }
-
-
 
 .favorite {
   color: var(--text);
@@ -210,7 +243,7 @@ a:active {
   font-size: 1rem;
   text-align: left;
   transition: scale 0.1s ease-in-out, border-color 0.1s ease-in-out;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .iconbar:hover {
@@ -363,8 +396,8 @@ html {
   .status-dot {
     width: 18px;
     height: 18px;
-    bottom: 3px;
-    right: 3px;
+    bottom: 23px;
+    right: 13px;
   }
 
   #status {
@@ -428,6 +461,7 @@ html {
     width: 15px;
     height: 15px;
     border: 2px solid #2f3136;
+    right: 20px;
   }
 
   .iconbar {

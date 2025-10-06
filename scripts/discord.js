@@ -24,6 +24,15 @@ async function updateWidget() {
       : `https://cdn.discordapp.com/embed/avatars/${
           parseInt(data.discord_user.discriminator) % 5
         }.png`;
+    const primary_guild = data.discord_user.primary_guild;
+    const badgeIconEl = document.getElementById("badgeicon");
+    const badgeIconTextEl = document.getElementById("badgetext");
+
+    let badgeIcon = `https://cdn.discordapp.com/clan-badges/${primary_guild.identity_guild_id}/${primary_guild.badge}.png`;
+    let badgeIconText = primary_guild.tag;
+
+    badgeIconTextEl.innerHTML = badgeIconText;
+    badgeIconEl.src = badgeIcon;
 
     document.getElementById("pfp").src = avatarUrl;
     document.getElementById("status-dot").className = `status-dot ${
@@ -80,28 +89,27 @@ async function updateWidget() {
         }
       }
     } else {
-            // No activity, so use Discord banner
-            
-            activityDetails = "";
-            if (data.discord_status == "online") {
-              activityText = "Online";
-            } else if (data.discord_status == "idle") {
-              activityText = "Idle";
-            } else if (data.discord_status == "do-not-disturb") {
-              activityText = "Do Not Disturb";
-            } else if (data.discord_status == "offline") {
-              document.getElementById("status").textContent = "";
-              activityText = "Offline";
-            }
-            
-            
-            // Discord banner logic
-            if (user_profile.banner) {
-                activityImage = `https://cdn.discordapp.com/banners/${data.discord_user.id}/${user_profile.banner}.gif?size=1024&animated=true`;
-            } else {
-                activityImage = `https://hcdn.snowme.ws/5.jpg`
-            }
-        }
+      // No activity, so use Discord banner
+
+      activityDetails = "";
+      if (data.discord_status == "online") {
+        activityText = "Online";
+      } else if (data.discord_status == "idle") {
+        activityText = "Idle";
+      } else if (data.discord_status == "dnd") {
+        activityText = "Do Not Disturb";
+      } else if (data.discord_status == "offline") {
+        document.getElementById("status").textContent = "";
+        activityText = "Offline";
+      }
+
+      // Discord banner logic
+      if (user_profile.banner) {
+        activityImage = `https://cdn.discordapp.com/banners/${data.discord_user.id}/${user_profile.banner}.gif?size=1024&animated=true`;
+      } else {
+        activityImage = `https://hcdn.snowme.ws/5.jpg`;
+      }
+    }
 
     activityTextEl.innerHTML = activityText;
     activityDetailsEl.textContent = activityDetails;
@@ -113,8 +121,7 @@ async function updateWidget() {
       activityImageEl2.style.display = "block";
     }
     if (user_profile.banner) {
-        activityImageEl.style.display = "none";
-
+      activityImageEl.style.display = "none";
     }
 
     const activityTimerEl = document.getElementById("timer");
