@@ -1,7 +1,7 @@
 @import url('colors.css');
 
 body {
-      background: url('../img/Cloudsday.jpg') no-repeat center center / cover;
+      background: url('../img/forrest.png') no-repeat center center / cover;
     background-color: #28283e;
     color: var(--text);
     font-family: 'JetBrains Mono', monospace;
