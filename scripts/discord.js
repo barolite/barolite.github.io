@@ -105,7 +105,7 @@ async function updateWidget() {
 
       // Discord banner logic
       if (user_profile.banner) {
-        activityImage = `https://cdn.discordapp.com/banners/${data.discord_user.id}/${user_profile.banner}.gif?size=1024&animated=true`;
+        activityImage = `https://cdn.discordapp.com/banners/${data.discord_user.id}/${user_profile.banner}.png?size=1024`;
       } else {
         activityImage = `https://hcdn.snowme.ws/5.jpg`;
       }
