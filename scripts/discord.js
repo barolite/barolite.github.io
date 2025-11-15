@@ -62,17 +62,20 @@ async function updateWidget() {
     const activityTextEl = document.getElementById("activity");
     const activityDetailsEl = document.getElementById("details");
     const activityImageEl = document.getElementById("largeimage");
-    const activityImageEl2 = document.getElementById("largeimage2");
+    const activityBannerEl = document.getElementById("largeimage2");
 
     let activityText = "No activity";
     let activityDetails = ""; // Default details
     let activityImage = null;
+    let activityBanner = null;
     activityImageEl.style.display = "none"; // Hide by default
-    activityImageEl2.style.display = "none"; // Hide by default
+    //activityBannerEl.style.display = "none"; // Hide by default
 
     if (spotify) {
       activityText = `Listening to <b>${spotify.song}</b> by ${spotify.artist}`;
       activityImage = spotify.album_art_url;
+      activityBanner = spotify.album_art_url;
+      console.log(activityBanner);
       activityDetails = `on ${spotify.album}`;
     } else if (playing) {
       activityText = `Playing <b>${playing.name}</b>`;
@@ -83,9 +86,13 @@ async function updateWidget() {
         if (imageKey.startsWith("mp:external/")) {
           // Hosted externally
           activityImage = `https://media.discordapp.net/${imageKey}`;
+          activityBanner = `https://media.discordapp.net/${imageKey}`;
+          console.log(activityBanner);
         } else {
           // Discord-hosted
           activityImage = `https://cdn.discordapp.com/app-assets/${playing.application_id}/${imageKey}.png`;
+          activityBanner = `https://cdn.discordapp.com/app-assets/${playing.application_id}/${imageKey}.png`;
+
         }
       }
     } else {
@@ -106,22 +113,26 @@ async function updateWidget() {
       // Discord banner logic
       if (user_profile.banner) {
         activityImage = `https://cdn.discordapp.com/banners/${data.discord_user.id}/${user_profile.banner}.png?size=1024`;
+        activityBanner = `https://cdn.discordapp.com/banners/${data.discord_user.id}/${user_profile.banner}.png?size=1024`;
       } else {
         activityImage = `https://hcdn.snowme.ws/5.jpg`;
+        activityBanner = `https://hcdn.snowme.ws/5.jpg`;
       }
     }
 
     activityTextEl.innerHTML = activityText;
     activityDetailsEl.textContent = activityDetails;
 
-    if (activityImage) {
+    if (activityImage || activityBanner) {
       activityImageEl.src = activityImage;
-      activityImageEl2.src = activityImageEl.src;
+      activityBannerEl.src = activityBanner;
       activityImageEl.style.display = "block";
-      activityImageEl2.style.display = "block";
+      activityBannerEl.style.display = "block";
     }
-    if (user_profile.banner) {
+    // yeah ik this is a really inefficient way to do this probably
+    if (activityText == "Online" || activityText == "Idle" || activityText == "Do Not Disturb" || activityText == "Offline") { 
       activityImageEl.style.display = "none";
+      activityBannerEl.style.display = "block";
     }
 
     const activityTimerEl = document.getElementById("timer");
