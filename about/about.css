@@ -91,10 +91,10 @@ main {
   height: 20px;
   align-items: center;
   background-color: var(--surface0);
-  padding-left: 0.25rem;
+
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding-right: 0.25rem;
+
 }
 
 #activitywrapper {

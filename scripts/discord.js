@@ -26,13 +26,22 @@ async function updateWidget() {
         }.png`;
     const primary_guild = data.discord_user.primary_guild;
     const badgeIconEl = document.getElementById("badgeicon");
-    const badgeIconTextEl = document.getElementById("badgetext");
+    const badgeIconTextEl = document.getElementById("badgetext"); 
+      badgeIconEl.style.display = "none";
+      badgeIconTextEl.style.display = "none";
 
-    let badgeIcon = `https://cdn.discordapp.com/clan-badges/${primary_guild.identity_guild_id}/${primary_guild.badge}.png`;
-    let badgeIconText = primary_guild.tag;
+    if (data.discord_user.primary_guild.tag != null) {
+      let badgeIcon = `https://cdn.discordapp.com/clan-badges/${primary_guild.identity_guild_id}/${primary_guild.badge}.png`;
+      let badgeIconText = primary_guild.tag;
 
-    badgeIconTextEl.innerHTML = badgeIconText;
-    badgeIconEl.src = badgeIcon;
+      badgeIconTextEl.innerHTML = badgeIconText;
+      badgeIconEl.src = badgeIcon;
+
+      badgeIconEl.style.display = "block";
+      badgeIconTextEl.style.display = "block";
+
+
+    }
 
     document.getElementById("pfp").src = avatarUrl;
     document.getElementById("status-dot").className = `status-dot ${
