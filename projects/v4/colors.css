@@ -1,0 +1,142 @@
+:root {
+    --rosewater: #f5e0dc;
+    --flamingo: #f2cdcd;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --maroon: #f3aba8;
+    --peach: #fab387;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: #94e2d5;
+    --sky: #89dceb;
+    --sapphire: #74c7ec;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+    --text: #cdd6f4;
+    --text2: #dce0e8;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+    --overlay2: #9399b2;
+    --overlay1: #7f849c;
+    --overlay0: #6c7086;
+    --surface2: #585b70;
+    --surface1: #45475a;
+    --surface0: #313244;
+    --surface: #28283e;
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --tmantle: rgba(24, 24, 37, 0.6);
+    --crust: #11111b;
+    --tcrust: rgba(17, 17, 27, 0.8);
+}
+
+@import url('colors.css');
+
+.fa-discord {
+    color: var(--blue);
+}
+.fa-youtube {
+    color: var(--red);
+}
+.fa-bluesky {
+    color:var(--sky);
+}
+.fa-tumblr {
+    color:var(--teal);
+}
+.fa-steam {
+    color:var(--blue);
+}
+.fa-x-twitter {
+    color:var(--text);
+}
+.fa-spotify {
+    color:var(--green);
+}
+.fa-github {
+    color:var(--text);
+}
+.fa-lastfm {
+    color:var(--maroon);
+}
+.fa-cube {
+    color:var(--yellow);
+}
+.fa-envelope {
+    color:var(--flamingo);
+}
+.fa-gamepad {
+    color:var(--lavender);
+}
+.fa-reddit {
+    color:var(--peach);
+}
+.fa-wrench {
+    color:var(--green);
+}
+.fa-bandcamp {
+    color:var(--sky);
+}
+.fa-letterboxd {
+    color:var(--peach);
+}
+.fa-record-vinyl {
+    color:var(--pink);
+}
+
+
+#teal:hover {
+    scale: 1.04;
+    border-color: var(--teal);
+}
+
+#red:hover {
+    scale: 1.04;
+    border-color: var(--red);
+}
+#flamingo:hover {
+    scale: 1.04;
+    border-color: var(--flamingo);
+}
+#blue:hover {
+    scale: 1.04;
+    border-color: var(--blue);
+}
+#sky:hover {
+    scale: 1.04;
+    border-color: var(--sky);
+}
+.green:hover {
+    scale: 1.04;
+    border-color: var(--green);
+}
+#peach:hover {
+    scale: 1.04;
+    border-color: var(--peach);
+
+}
+#maroon:hover {
+    scale: 1.04;
+    border-color: var(--maroon);
+}
+#lavender:hover {
+    scale: 1.04;
+    border-color: var(--lavender);
+}
+#yellow:hover {
+    scale: 1.04;
+    border-color: var(--yellow);
+}
+#white:hover {
+    scale: 1.04;
+    border-color: var(--text);
+}
+.peach:hover {
+    scale: 1.04;
+    border-color: var(--peach);
+}
+#pink:hover {
+    scale: 1.04;
+    border-color: var(--pink);
+}
