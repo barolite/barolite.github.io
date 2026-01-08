@@ -1,32 +1,29 @@
+/* oxocarbon colors, from the nvim theme */
+
 :root {
-    --rosewater: #f5e0dc;
-    --flamingo: #f2cdcd;
-    --pink: #f5c2e7;
-    --mauve: #cba6f7;
-    --red: #f38ba8;
-    --maroon: #f3aba8;
-    --peach: #fab387;
-    --yellow: #f9e2af;
-    --green: #a6e3a1;
-    --teal: #94e2d5;
-    --sky: #89dceb;
-    --sapphire: #74c7ec;
-    --blue: #89b4fa;
-    --lavender: #b4befe;
-    --text: #cdd6f4;
-    --text2: #dce0e8;
-    --subtext1: #bac2de;
-    --subtext0: #a6adc8;
-    --overlay2: #9399b2;
-    --overlay1: #7f849c;
-    --overlay0: #6c7086;
-    --surface2: #585b70;
-    --surface1: #45475a;
-    --surface0: #313244;
-    --surface: #28283e;
-    --base: #1e1e2e;
-    --mantle: #181825;
-    --tmantle: rgba(24, 24, 37, 0.6);
-    --crust: #11111b;
-    --tcrust: rgba(17, 17, 27, 0.8);
+    --deep: #161616;
+    --deeper: #131313;
+    --black: #101010;
+    --base: #262626;
+    --base-alt: #191919;
+    --surface: #393939;
+    --overlay: #525252;
+    --sub-4: #909090;
+    --sub-3: #D0D0D0;
+    --sub-2: #dde1e6;
+    --sub-1: #f2f4f8;
+    --text: #ffffff;
+
+    --pink: #ff7eb6;
+    --red: #ee5396;
+    --orange: #ff6f00;
+    --yellow: #ffab91;
+    --green: #42be65;
+    --cyan: #08bdba;
+    --cyan-alt: #3ddbd9;
+    --sky: #82cfff;
+    --blue: #33b1ff;
+    --peri: #78a9ff;
+    --purple: #be95ff;
+
 }

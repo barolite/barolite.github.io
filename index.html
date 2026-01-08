@@ -3,52 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0c8ff4ec4c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <title>home</title>
+    <title>barolite's page</title>
 </head>
 <body>
-    <main>
-    <div id="header">
-        <div class="p" id="time" style="grid-area: time">Time</div>
-    </div>
-    <div id="main">
-        <div id="mainwrapper">
-            <img id="long" src="img/long.avif" alt="snowgif">
-            <div class="wrapper">
-                <p id="welcome">welcome to my site, forever work in progress</p>
+    <script>0</script>
+    <div id="main-wrapper">
+        <div class="container" id="main">
+            <div id="tabs">
+                <input type="radio" id="tab4" name="mytabs" checked="checked">
+                <label for="tab4" class="fa-solid fa-globe tab-label"></label>
+                <input type="radio" id="tab1" name="mytabs">
+                <label for="tab1" class="fa-solid fa-music tab-label"></label>
+                <input type="radio" id="tab2" name="mytabs">
+                <label for="tab2" class="fa-solid fa-hammer tab-label"></label>
+                <input type="radio" id="tab3" name="mytabs">
+                <label for="tab3" class="fa-solid fa-share-nodes tab-label"></label>
+            </div>
+            <div class="divider" style="grid-area: divider;"></div>
+            <div class="separator"></div>
+            <div class="tab tab1">
+                <h2 class="tab-title">music</h2>
+                <p class="italic gray">(it's free! go ahead and give a listen!)</p>
+                <div id="bandcamp-embeds">
+                    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=2604435950/size=large/bgcol=333333/linkcol=9a64ff/tracklist=false/artwork=none/transparent=true/" seamless><a href="https://barolite.bandcamp.com/track/perplexus">perplexus by barolite</a></iframe>
+                    <iframe style="border: 0; width: 100%; height: 274px;" src="https://bandcamp.com/EmbeddedPlayer/album=1537171809/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/" seamless><a href="https://barolite.bandcamp.com/album/torsion-ep">torsion ep by barolite</a></iframe>
+                </div>
+            </div>
+            <div class="tab tab2">
+                <div id="project-content">
+                    <div id="commissions">
+                        <h2 class="tab-title">commissions</h2>
+                        <a class="project-wrapper" style="border-color: var(--blue);" href='https://gunsoffortune.neocities.org/'>
+                            <div class="large bold">Guns of Fortune</div>
+                            <div class="italic">Webcomic by Meepma and Lonk2018, website commission</div> 
+                            <div class="italic gray">gunsoffortune.neocities.org</div>           
+                        </a>
+                    </div>
+                    <div id="ownstuff">
+                        <h2 class="tab-title">personal</h2>
+                        <a class="project-wrapper" style="border-color: var(--green);" href='https://github.com/barolite/barolite.github.io'>
+                            <div class="large bold">Github Page V5</div>
+                            <div class="italic">The site you are using right now</div>           
+                            <div class="italic gray">barolite.github.io</div>    
+                        </a>
+                        <a class="project-wrapper" style="border-color: var(--pink);" href='/projects/memory'>
+                            <div class="large bold">Memory</div>
+                            <div class="italic">Click the squares that light up</div>   
+                            <div class="italic gray">projects/memory</div>         
+                        </a>
+                        <a class="project-wrapper" style="border-color: var(--peri);" href='/projects/memory2'>
+                            <div class="large bold">Memory 2</div>
+                            <div class="italic">Memory, but harder!</div>   
+                            <div class="italic gray">projects/memory2</div>         
+                        </a>
+                        <a class="project-wrapper" style="border-color: var(--red);" href='/projects/demo1'>
+                            <div class="large bold">Product Demo</div>
+                            <div class="italic">A mockup for a product/advertising page. Inspired by Debian's website</div>   
+                            <div class="italic gray">projects/demo1</div>         
+                        </a>
+                        <a class="project-wrapper" style="border-color: var(--blue);" href='/projects/v4'>
+                            <div class="large bold">Github Page V4</div>
+                            <div class="italic">The previous version of my About Me page</div>   
+                            <div class="italic gray">projects/v4</div>         
+                        </a>
+                    </div>
+                </div>
+            </div>   
+            <div class="tab tab3">
+                <div id="socials-content">
+                    <a id="email" class="social-button" target="_blank" href='mailto:barolites@gmail.com' style="grid-area: email; color: var(--text);">
+                        <i class="fa-solid fa-envelope icon"></i><span class="vanish">email</span></a>
+                    <a id="github" class="social-button" target="_blank" href='https://github.com/barolite' style="grid-area: github; color: var(--text);">
+                        <i class="fa-brands fa-github icon"></i><span class="vanish">github</span></a>
+                    <a id="bandcamp" class="social-button" target="_blank" href='https://barolite.bandcamp.com' style="grid-area: bandcamp; color: var(--text);">
+                        <i class="fa-brands fa-bandcamp icon"></i><span class="vanish">bandcamp</span></a>
+                    <a id="youtube" class="social-button" target="_blank" href='https://discord.com/users/707094670588641400' style="grid-area: youtube; color: var(--text);">
+                        <i class="fa-brands fa-youtube icon"></i><span class="vanish">youtube</span></a>
+                    <a id="spotify" class="social-button" target="_blank" href='https://github.com/barolite' style="grid-area: spotify; color: var(--text);">
+                        <i class="fa-brands fa-spotify icon"></i><span class="vanish">spotify</span></a>
+                    <a id="lastfm" class="social-button" target="_blank" href='https://last.fm/user/barolite' style="grid-area: lastfm; color: var(--text);">
+                        <i class="fa-brands fa-lastfm icon"></i><span class="vanish">last.fm</span></a>
+                    <a id="twitter" class="social-button" target="_blank" href='https://x.com/barolite' style="grid-area: twitter; color: var(--text);">
+                        <i class="fa-brands fa-x-twitter icon"></i><span class="vanish">twitter</span></a>
+                    <a id="letterboxd" class="social-button" target="_blank" href='https://letterboxd.com/barolite' style="grid-area: letterboxd; color: var(--text);">
+                        <i class="fa-brands fa-letterboxd icon"></i><span class="vanish">letterboxd</span></a>
+                    <a id="rym" class="social-button" target="_blank" href='https://rateyourmusic.com/~barolite' style="grid-area: rym; color: var(--text);">
+                        <i class="fa-solid fa-record-vinyl icon"></i><span class="vanish">rateyourmusic</span></a>
+                    <a id="steam" class="social-button" target="_blank" href='https://steamcommunity.com/id/barolite/' style="grid-area: steam; color: var(--text);">
+                        <i class="fa-brands fa-steam icon"></i><span class="vanish">steam</span></a>
+                    <a id="namemc" class="social-button" target="_blank" href='https://namemc.com/profile/barolite.1' style="grid-area: namemc; color: var(--text);">
+                        <i class="fa-solid fa-cube icon"></i><span class="vanish">namemc</span></a>
+                    <a id="roblox" class="social-button" target="_blank" href='https://www.roblox.com/users/2243315847/profile' style="grid-area: roblox; color: var(--text);">
+                        <i class="fa-solid fa-gamepad icon"></i><span class="vanish">roblox</span></a>
+                    <div class="social-cat" style="grid-area: mystuff; border-color: var(--pink);">my stuff</div>
+                    <div class="social-cat" style="grid-area: stats; border-color: var(--cyan-alt);">stats</div>
+                    <div class="social-cat" style="grid-area: games; border-color: var(--peri);">games</div>
+                    <div class="social-cat" style="grid-area: misc; border-color: var(--blue);">misc</div>
+                        
+                </div>
+            </div>
+            <div class="tab tab4">
+                <div id="home-content">
+                    <div class="container" id="banner-div">
+                        <img id="discord-banner" draggable="false" src="img/banner-placeholder.png">
+                        <div id="status-bg">
+                            <div id="status">loading...</div>   
+                        </div>
+                        <div id="activity-bg">
+                            <div id="activity">loading...</div>   
+                        </div>
+                    </div>
+                    <div id="thisisforthedivider" style="grid-area: thisisforthedivider;">
+                        <div id="setup" style="grid-area: setup;">
+                            <p>setup:</p>
+                            <p class="low">- Acer Chromebook Spin 714</p>
+                            <p class="gray italic low">(not a school one!)</p>
+                            <p>os: EndeavourOS + Hyprland, dotfiles <a class="white-link" href="dog">soon</a></p>
+                            <p>phone: motorola edge+ (2022)</p>
+                            <p>------------------------</p>
+                            <p>daw: FL Studio 24 (+ Reaper in the future)</p>
+                            <p>midi: Donner DMK25-Pro</p>
+
+                        </div>
+                        <div class="divider" style="grid-area: divider;"></div>
+                        <div id="somethingelse" style="grid-area: somethingelse;">
+                            <canvas id="skin_container"></canvas>
+                            <p class="italic">Crocuta crocuta</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="buttonwrapper">
-            <button class="bwrapper" onclick="location.href='about'">
-                <div class="profile">
-                <img id="snep" src="img/about.png" alt="snep">
-
-                    <h1>about me</h1>
+        <div class="container" id="music">
+            <div id="cover-section">
+                <img class="smallimage" id="album-cover" src="img/music.svg" alt="album cover" draggable="false">
+                <div id="marquee-bg">
+                    <div id="marquee">via Last.fm</div>
                 </div>
-            </button>
-            <button class="bwrapper" onclick="location.href='projects'">
-                <div class="profile">
-                    <img id="snep" src="img/projects.png" alt="thingy">
-
-                    <h1>projects</h1>
-                </div>
-            </button>
-            <button class="bwrapper" onclick="location.href='dog'">
-                <div class="profile">
-                    <img id="snep" src="img/dog.png" alt="thingy">
-
-                    <h1>???</h1>
-                </div>
-            </button>
+            </div>
+            <div class="sub" id="spotifyText">
+                <h2 id="song"></h2>
+                <div id="artist" class="smalltext">loading...</div>
+                <div id="album" class="smalltext bold"></div>
+            </div>
         </div>
-    </div>
-    <div id="footer">
-        <div class="p" id="footertext">Photo by <a href="https://unsplash.com/@veloradio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rapha Wilde</a> on <a href="https://unsplash.com/photos/a-snow-leopard-laying-on-top-of-a-rock-5iJ-ncwRqOI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-    </div>
-        </main>
-    <script src="scripts/time.js"></script>
+        <div class="container" id="profile">
+            <div id="pfp-wrapper">
+                <img class="pfp" id="discord-pfp" src="img/avatar.png" alt="profile picture" draggable="false">
+                <div class="bold" style="font-size: 1.8em; text-align: center;">barolite</div>
+            </div>
+            <div id="bio">
+                <p>- 17 year old from california, he/him</p>
+                <p>- hobbies include coding, music production, some videogames, and linux <span id="linuxricing" style="color: var(--yellow); text-decoration: underline; cursor: pointer;">ricing</span><span class="hide">ricing (technology) -  customizing a desktop's look, feel and functionality</span></p>
+                <p>-  i make music, check it out on <a style="color:var(--sky);" target="_blank" href="https://barolite.bandcamp.com">bandcamp</a></p>
+                <p>- i am currently learning ambient music and how to draw (maybe!)</p>
+                <p>- talk to me about CSS, night in the woods, IDM, <a style="color:rgb(var(--snow));" target="_blank" href="https://homph.snowme.ws/">snow leopards</a>, movies, and graphic design</p>            </div>
+            <div id="socials-content-small">
+                <a id="discord" class="social-button" target="_blank" href='https://discord.com/users/707094670588641400' style="grid-area: discord; color: var(--text);">
+                    <i class="fa-brands fa-discord icon"></i></a>
+            </div>
+        </div>
+        <div class="container" id="stats">
+            <h1 id="song-count">17</h1>
+            <div style="font-size: x-large;">songs this year</div>
+        </div>
+    </div>    
+
+
+    <script src="scripts/discord.js"></script>
+    <script type="module" src="scripts/mc2.js"></script>
+    <script src="js/music.js"></script>
+
 </body>
 </html>

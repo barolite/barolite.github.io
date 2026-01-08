@@ -1,109 +1,57 @@
-@import url('colors.css');
+@import url("colors.css");
 
-.fa-discord {
+#discord:hover i, #steam:hover i {
     color: var(--blue);
 }
-.fa-youtube {
+
+#github:hover i, #twitter:hover i{
+    color: var(--sub-2);
+}
+
+#bandcamp:hover i {
+    color: var(--sky);
+}
+
+#spotify:hover i, #namemc:hover i {
+    color: var(--green);
+}
+
+#letterboxd:hover i {
+    color: var(--orange);
+}
+
+#email:hover i {
+    color: var(--yellow);
+}
+
+#rym:hover i{
+    color: var(--peri);
+}
+
+#roblox:hover i{
+    color: var(--purple);
+}
+
+#youtube:hover i, #lastfm:hover i{
     color: var(--red);
 }
-.fa-bluesky {
-    color:var(--sky);
-}
-.fa-tumblr {
-    color:var(--teal);
-}
-.fa-steam {
-    color:var(--blue);
-}
-.fa-x-twitter {
-    color:var(--text);
-}
-.fa-spotify {
-    color:var(--green);
-}
-.fa-github {
-    color:var(--text);
-}
-.fa-lastfm {
-    color:var(--maroon);
-}
-.fa-cube {
-    color:var(--yellow);
-}
-.fa-envelope {
-    color:var(--flamingo);
-}
-.fa-gamepad {
-    color:var(--lavender);
-}
-.fa-reddit {
-    color:var(--peach);
-}
-.fa-wrench {
-    color:var(--green);
-}
-.fa-bandcamp {
-    color:var(--sky);
-}
-.fa-letterboxd {
-    color:var(--peach);
-}
-.fa-record-vinyl {
-    color:var(--pink);
+
+#bandcamp, #github, #spotify {
+    border-color: color-mix(in srgb, var(--pink), var(--deep) 30%);
+    transition: border-color 120ms ease;
 }
 
-
-#teal:hover {
-    scale: 1.04;
-    border-color: var(--teal);
+#lastfm, #letterboxd, #rym {
+    transition: border-color 120ms ease;
+    border-color: color-mix(in srgb, var(--cyan-alt), var(--deep) 30%);
 }
 
-#red:hover {
-    scale: 1.04;
-    border-color: var(--red);
+#roblox, #namemc, #steam {
+    transition: border-color 120ms ease;
+    border-color: color-mix(in srgb, var(--peri), var(--deep) 30%);
 }
-#flamingo:hover {
-    scale: 1.04;
-    border-color: var(--flamingo);
-}
-#blue:hover {
-    scale: 1.04;
-    border-color: var(--blue);
-}
-#sky:hover {
-    scale: 1.04;
-    border-color: var(--sky);
-}
-.green:hover {
-    scale: 1.04;
-    border-color: var(--green);
-}
-#peach:hover {
-    scale: 1.04;
-    border-color: var(--peach);
 
-}
-#maroon:hover {
-    scale: 1.04;
-    border-color: var(--maroon);
-}
-#lavender:hover {
-    scale: 1.04;
-    border-color: var(--lavender);
-}
-#yellow:hover {
-    scale: 1.04;
-    border-color: var(--yellow);
-}
-#white:hover {
-    scale: 1.04;
-    border-color: var(--text);
-}
-.peach:hover {
-    scale: 1.04;
-    border-color: var(--peach);
-}
-#pink:hover {
-    scale: 1.04;
-    border-color: var(--pink);
+#twitter, #email, #youtube {
+    transition: border-color 120ms ease;
+    border-color: color-mix(in srgb, var(--blue), var(--deep) 30%);
 }
