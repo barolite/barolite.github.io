@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>memory2</title>
-    <link href="memory/style2.css" rel="stylesheet">
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>memory 2</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="box tile" style="grid-area: div1;">0</div>
@@ -24,6 +24,14 @@
     <div class="box tile" style="grid-area: div14;">13</div>
     <div class="box tile" style="grid-area: div15">14</div>
     <div class="box tile" style="grid-area: div16;">15</div>
+    <div class="box tile" style="grid-area: div17;">16</div>
+    <div class="box tile" style="grid-area: div18;">17</div>
+    <div class="box tile" style="grid-area: div19;">18</div>
+    <div class="box tile" style="grid-area: div20;">19</div>
+    <div class="box tile" style="grid-area: div21;">20</div>
+    <div class="box tile" style="grid-area: div22;">21</div>
+    <div class="box tile" style="grid-area: div23;">22</div>
+    <div class="box tile" style="grid-area: div24;">23</div>
     
     <div id="scoreboard" style="position: fixed; bottom: 1em; left: 1em; color: white; font-family: monospace; display: none;">
         <div id="text">Score: <span id="score">0</span></div>
@@ -31,141 +39,6 @@
     </div>
     
 </body>
-<!--<script>
-    const divs = Array.from(document.querySelectorAll('body > div')).filter(div => div.textContent.trim() !== '');
-    let sequence = [];
-    let userInput = [];
-    let awaitingUserInput = false;
-    
-    // Utility to highlight a div
-    function flashDiv(div) {
-        return new Promise(resolve => {
-            const originalColor = div.style.backgroundColor;
-            div.style.backgroundColor = '#ccd6f4';
-            setTimeout(() => {
-                div.style.backgroundColor = '';
-                resolve();
-            }, 500);
-        });
-    }
-    
-    // Show sequence to user
-    async function showSequence() {
-        awaitingUserInput = false;
-        for (const index of sequence) {
-            await flashDiv(divs[index]);
-            await new Promise(r => setTimeout(r, 200));
-        }
-        userInput = [];
-        awaitingUserInput = true;
-    }
-    
-    // Add a new step and show it
-    function nextRound() {
-        const nextIndex = Math.floor(Math.random() * divs.length);
-        sequence.push(nextIndex);
-        showSequence();
-    }
-    
-    // Handle clicks
-    divs.forEach((div, index) => {
-        div.addEventListener('click', () => {
-            if (!awaitingUserInput) return;
-    
-            userInput.push(index);
-            flashDiv(div);
-    
-            for (let i = 0; i < userInput.length; i++) {
-                if (userInput[i] !== sequence[i]) {
-                    alert('Wrong! Game over.');
-                    sequence = [];
-                    setTimeout(nextRound, 1000);
-                    return;
-                }
-            }
-    
-            if (userInput.length === sequence.length) {
-                setTimeout(nextRound, 1000);
-            }
-        });
-    });
-    
-    // Start the game
-    nextRound();
-    </script> -->
-<!--<script>
-        const divs = Array.from(document.querySelectorAll('body > div')).filter(div => div.textContent.trim() !== '');
-        let currentRound = 1;
-        let speed = 500; // milliseconds for flash
-        let activeSet = new Set();
-        let userSet = new Set();
-        let acceptingInput = false;
-        
-        // Flash effect
-        function flashDivs(indices, color = '#f9e2af') {
-            return new Promise(resolve => {
-                indices.forEach(i => {
-                    divs[i].style.backgroundColor = color;
-                });
-                setTimeout(() => {
-                    indices.forEach(i => {
-                        divs[i].style.backgroundColor = '';
-                    });
-                    resolve();
-                }, speed);
-            });
-        }
-        
-        // Flash all on wrong guess
-        async function flashAllRed() {
-            await flashDivs(divs.map((_, i) => i), '#f38ba8');
-        }
-        
-        // Start next round
-        async function nextRound() {
-            acceptingInput = false;
-            userSet.clear();
-            activeSet.clear();
-        
-            // Generate unique indices
-            while (activeSet.size < currentRound) {
-                activeSet.add(Math.floor(Math.random() * divs.length));
-            }
-        
-            await flashDivs(Array.from(activeSet));
-            acceptingInput = true;
-        }
-        
-        // Handle user input
-        divs.forEach((div, index) => {
-            div.addEventListener('click', async () => {
-                if (!acceptingInput || userSet.has(index)) return;
-        
-                userSet.add(index);
-                div.style.backgroundColor = '#a6e3a1';
-                setTimeout(() => { div.style.backgroundColor = ''; }, 200);
-        
-                if (!activeSet.has(index)) {
-                    await flashAllRed();
-                    currentRound = 1;
-                    speed = 500;
-                    setTimeout(nextRound, 1000);
-                    return;
-                }
-        
-                // If correct and all inputs given
-                if (userSet.size === activeSet.size) {
-                    acceptingInput = false;
-                    currentRound++;
-                    speed = Math.max(150, speed - 20); // speed up but not below 150ms
-                    setTimeout(nextRound, 1000);
-                }
-            });
-        });
-        
-        // Start game
-        nextRound();
-    </script>-->
     <script>
         const divs = Array.from(document.querySelectorAll('.tile'));
         let speed = 500;
