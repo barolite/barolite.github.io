@@ -1,9 +1,3 @@
-
-const nowPlayingText = document.getElementById('nowplaying');
-
-//const playingorno = document.getElementById('playingorno');
-//const albumCoverDiv = document.getElementById('album');
-
 const API_URL = 'https://candid-sunshine-90af46.netlify.app/.netlify/functions/nowplaying';
 
 async function fetchNowPlaying() {
@@ -13,35 +7,45 @@ async function fetchNowPlaying() {
 
         const data = await response.json();
         const track = data.recenttracks.track[0];
+        const scrobbles = data.recenttracks['@attr'];
+        
 
         const artist = track.artist['#text'];
         const title = track.name;
+        const album = track.album['#text'];
         const imageList = track.image;
         const image = imageList && imageList.length ? imageList[imageList.length - 1]['#text'] : '';
+        const count = scrobbles.total;
 
-        /*if (track['@attr'] && track['@attr'].nowplaying === 'true') {
-            playingorno.textContent = '';
+        if (track['@attr'] && track['@attr'].nowplaying === 'true') {
+            document.getElementById('song').innerHTML = `<b>${title}</b>`;
+            document.getElementById('artist').innerHTML = `${artist}`;
+            document.getElementById('album').innerHTML = `on ${album}`;
+            document.getElementById('album-cover').src= `${image}`; //album cover
+            document.getElementById('marquee-bg').style.display = "block";
         } else {
-            playingorno.textContent = '';
-        }*/
-        if (track['@attr'] && track['@attr'].nowplaying === 'true' && !spotify) {
-            nowPlayingText.textContent = `listening to ${artist} - ${title} via last.fm`;
-        } else {
-            nowPlayingText.textContent = '';
+            document.getElementById('song').innerHTML = '<i>Not playing music</i>';
+            document.getElementById('artist').innerHTML = ``;
+            document.getElementById('album').innerHTML = ``;
+            document.getElementById('album-cover').src = "img/music.svg" // default
+            document.getElementById('marquee-bg').style.display = "none";
         }
 
-        /* album cover part
-        if (image) {
-            albumCoverDiv.innerHTML = `<img src="${image}">`; //album cover
+        if (scrobbles.total) {
+            document.getElementById('song-count').innerHTML = `${count}`;
         } else {
-            albumCoverDiv.innerHTML = `<img style="position: absolute; transform: rotate(45deg)" src="images/default.png">`; // default
-        }*/
+            document.getElementById('song-count').innerHTML = '???';
+        }
 
     } catch (error) {
         console.error('Error fetching Last.fm data:', error);
-        nowPlayingText.textContent = 'error loading music info';
-        albumCoverDiv.innerHTML = `<img id="album" src="images/default.png">`;
+        document.getElementById('song').innerHTML = 'error loading music info';
+        document.getElementById('album-cover').src = '/.img/music.svg';
     }
 }
 
-    fetchNowPlaying();
+fetchNowPlaying();
+
+
+
+
