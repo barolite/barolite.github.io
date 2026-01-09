@@ -502,6 +502,10 @@
   overflow: hidden;
 }
 
+#spotifyText h2 {
+  margin: 0;
+}
+
 #song {
   bottom: 100px;
   left: 120px;
