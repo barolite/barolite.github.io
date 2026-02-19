@@ -327,7 +327,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: color-mix(in srgb, var(--deep), transparent 60%);
-  border-bottom: inherit;
+  border-top: inherit;
   border-right: inherit;
 
   overflow: hidden;
@@ -366,6 +366,13 @@
   transform: translateX(100%);
   -webkit-animation: scroll-left 8s linear infinite;
   animation: scroll-left 8s linear infinite;
+}
+
+#discord-pfp {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 90px;
 }
 
 #profile {
@@ -632,7 +639,7 @@
 
 #song-count {
   color: var(--green);
-  font-size: 4em;
+  font-size: 3em;
   margin: 0;
 }
 
