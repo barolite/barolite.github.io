@@ -68,6 +68,14 @@ body {
   font-size: 1rem;
   color: var(--sub-4);
 }
+.credits {
+  font-size: 10px;
+  color: var(--sub-4);
+  text-align: center;
+}
+.credits a {
+  color: var(--sub-2);
+}
 .low {
   margin: 2px;
 }
