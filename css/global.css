@@ -83,10 +83,11 @@ body {
   color: var(--text);
 }
 
+
+/* 222 by 458 images */
 .social-button {
-  background: -o-linear-gradient(45deg, var(--deeper), var(--base));
-  background: linear-gradient(45deg, var(--deeper), var(--base));
-  border: 1px solid;
+  background: linear-gradient(45deg, var(--base-alt), var(--base));
+  border: 0px solid;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition:
@@ -112,8 +113,10 @@ body {
     -webkit-transform 120ms ease,
     -webkit-box-shadow 120ms ease;
   padding: 6px;
-  height: 100%;
-  width: 100%;
+  scroll-snap-align: start;
+
+  height: 90%;
+  min-width: 31%;
   text-align: center;
   font-size: 1.3rem;
   color: var(--sub-3) !important;
@@ -136,6 +139,13 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .social-button {
+    min-width: 47% !important;
+    height: 95%;
+  }
 }
 
 .social-button i {
@@ -179,7 +189,7 @@ body {
 
 @media (max-width: 650px) {
   .vanish {
-    display: none;
+    display: block;
   }
   .social-cat {
     font-size: 1rem !important;

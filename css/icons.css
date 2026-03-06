@@ -1,57 +1,95 @@
 @import url("colors.css");
 
-#discord:hover i, #steam:hover i {
-    color: var(--blue);
+#bandcamp {
+    background: linear-gradient(0deg, var(--sky)0 3%, var(--base-alt) 3% 100%);
 }
-
-#github:hover i, #twitter:hover i{
-    color: var(--sub-2);
-}
-
 #bandcamp:hover i {
     color: var(--sky);
 }
-
-#spotify:hover i, #namemc:hover i {
-    color: var(--green);
+#bandcamp:hover {
+    background: linear-gradient(45deg, var(--sky) 0 10%, var(--base) 10% 90%, var(--sky) 90% 100%);
 }
 
+#github, #twitter {
+    background: linear-gradient(0deg, var(--sub-2)0 3%, var(--base-alt) 3% 100%);
+}
+#github:hover i, #twitter:hover i {
+    color: var(--sub-2);
+}
+#github:hover, #twitter:hover {
+    background: linear-gradient(45deg, var(--sub-2) 0 10%, var(--base) 10% 90%, var(--sub-2) 90% 100%);
+}
+
+#lastfm {
+    background: linear-gradient(0deg, var(--red)0 3%, var(--base-alt) 3% 100%);
+}
+#lastfm:hover i {
+    color: var(--red);
+}
+#lastfm:hover {
+    background: linear-gradient(45deg, var(--red) 0 10%, var(--base) 10% 90%, var(--red) 90% 100%);
+}
+
+#letterboxd {
+    background: linear-gradient(0deg, var(--orange)0 3%, var(--base-alt) 3% 100%);
+}
 #letterboxd:hover i {
     color: var(--orange);
 }
-
-#email:hover i {
-    color: var(--yellow);
+#letterboxd:hover {
+    background: linear-gradient(45deg, var(--orange) 0 10%, var(--base) 10% 90%, var(--orange) 90% 100%);
 }
 
-#rym:hover i{
+#rym {
+    background: linear-gradient(0deg, var(--peri)0 3%, var(--base-alt) 3% 100%);
+}
+#rym:hover i {
     color: var(--peri);
 }
+#rym:hover {
+    background: linear-gradient(45deg, var(--peri) 0 10%, var(--base) 10% 90%, var(--peri) 90% 100%);
+}
 
-#roblox:hover i{
+#steam, #discord {
+    background: linear-gradient(0deg, var(--blue)0 3%, var(--base-alt) 3% 100%);
+}
+#steam:hover i, #discord:hover i {
+    color: var(--blue);
+}
+#steam:hover, #discord:hover{
+    background: linear-gradient(45deg, var(--blue) 0 10%, var(--base) 10% 90%, var(--blue) 90% 100%);
+}
+
+#roblox {
+    background: linear-gradient(0deg, var(--purple)0 3%, var(--base-alt) 3% 100%);
+}
+#roblox:hover i {
     color: var(--purple);
 }
-
-#youtube:hover i, #lastfm:hover i{
-    color: var(--red);
+#roblox:hover {
+    background: linear-gradient(45deg, var(--purple) 0 10%, var(--base) 10% 90%, var(--purple) 90% 100%);
 }
 
-#bandcamp, #github, #spotify {
-    border-color: color-mix(in srgb, var(--pink), var(--deep) 30%);
-    transition: border-color 120ms ease;
-}
-
-#lastfm, #letterboxd, #rym {
-    transition: border-color 120ms ease;
-    border-color: color-mix(in srgb, var(--cyan-alt), var(--deep) 30%);
-}
-
-#roblox, #namemc, #steam {
-    transition: border-color 120ms ease;
-    border-color: color-mix(in srgb, var(--peri), var(--deep) 30%);
-}
-
-#twitter, #email, #youtube {
-    transition: border-color 120ms ease;
-    border-color: color-mix(in srgb, var(--blue), var(--deep) 30%);
+@media (max-width: 768px) {
+    #bandcamp {
+        background: linear-gradient(0deg, var(--sky)0 3%, var(--base) 3% 100%);
+    }
+    #github, #twitter {
+        background: linear-gradient(0deg, var(--sub-2)0 3%, var(--base-alt) 3% 100%);
+    }
+    #lastfm {
+        background: linear-gradient(0deg, var(--red)0 3%, var(--base) 3% 100%);
+    }
+    #letterboxd {
+        background: linear-gradient(0deg, var(--orange)0 3%, var(--base-alt) 3% 100%);
+    }
+    #rym {
+        background: linear-gradient(0deg, var(--peri)0 3%, var(--base) 3% 100%);
+    }
+    #steam, #discord {
+        background: linear-gradient(0deg, var(--blue)0 3%, var(--base) 3% 100%);
+    }
+    #roblox {
+        background: linear-gradient(0deg, var(--purple)0 3%, var(--base-alt) 3% 100%);
+    }
 }

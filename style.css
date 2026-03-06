@@ -44,7 +44,7 @@
 #main {
   -ms-grid-column-span: 3;
   grid-area: main;
-
+  width: 860px;
   padding: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,6 +82,7 @@
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 30px;
+    width: 100%;
   }
 
   .divider {
@@ -143,13 +144,60 @@
 
 #main:has(#tab3:checked) .tab3 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden !important;
+  overflow-y: hidden;
+  
 }
 
 #main:has(#tab4:checked) .tab4 {
   display: block;
   overflow: hidden;
 }
+
+.tab3 {
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+  .tab3 {
+    width: 333px;
+    scrollbar-width:initial !important;
+  }
+
+  }
+
+#leftbutton {
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 12%;
+  opacity: 30%;
+  height: 100px;
+  width: 20px;
+  font-size: 48px;
+  color: var(--sub-4);
+  z-index: 2;
+}
+
+#rightbutton {
+  display: block;
+  position: absolute;
+  top: 35%;
+  right: 3%;
+  opacity: 30%;
+  height: 100px;
+  width: 20px;
+  font-size: 48px;
+  color: var(--sub-4);
+  z-index: 2;
+}
+
+#leftbutton:hover, #rightbutton:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
 
 /* tab 1 - music */
 #bandcamp-embeds {
@@ -174,29 +222,81 @@
   .tab-title {
     text-align: center;
   }
+  #leftbutton, #rightbutton {
+    display: none;
+  }
 }
 
 /*tab 3 - socials */
 #socials-content {
-  height: 100%;
+  height: 90%;
+  gap: 3%;;
+  display: flex;
+  width: auto;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  padding: 0;
+  scrollbar-width: none;
+}
 
-  display: -ms-grid;
+#bigmarquee {
+  overflow: hidden;
+  width: auto;
+  height: 50px;
+}
 
-  display: grid;
+#bigmarquee2 {
+  font-size: 20px;
+  transform: translateX(100%);
+  animation: nu-scroll-left 25s linear infinite;
+  z-index: 0;
+  text-wrap: nowrap;
+  color: var(--sub-4);
+  font-weight: 100;
+  font-style: italic;
+}
+
+@keyframes nu-scroll-left {
+  0% {
+    transform: translateX(110%);
+  }
+
+  100% {
+    transform: translateX(-260%);
+  }
+}
+
+@keyframes phone-scroll-left {
+  0% {
+    transform: translateX(120%);
+  }
+
+  100% {
+    transform: translateX(-550%);
+  }
+}
+
+@media (max-width: 768px) {
+  #bigmarquee {
+    width: auto;
+    margin-top: 30px;
+  }
+  #socials-content {
+    height: 380px;
+    scrollbar-width: initial;
+  }
+  #bigmarquee2 {
+    animation: phone-scroll-left 25s linear infinite;
+  }
+}
+
+#social-cat-wrapper {
+  display: flex;
   gap: 10px;
-  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 0.4fr 10px 0.1fr 10px 1fr 10px 1fr 10px 1fr;
-  grid-template-rows: 0.4fr 0.1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "mystuff stats games misc"
-    "blank blank blank blank"
-    "bandcamp rym steam twitter"
-    "github letterboxd namemc email"
-    "spotify lastfm roblox youtube";
 }
 
 .social-cat {
+  flex: 1 1 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,7 +406,7 @@
   -o-object-fit: contain;
   object-fit: contain;
   -webkit-filter: blur(1px) brightness(0.8);
-  filter: blur(1px) brightness(0.8);
+  filter: blur(1px) brightness(0.6);
   -webkit-transition: -webkit-filter 120ms ease;
   transition: -webkit-filter 120ms ease;
   -o-transition: filter 120ms ease;
@@ -314,6 +414,12 @@
   transition:
     filter 120ms ease,
     -webkit-filter 120ms ease;
+
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;    
+  user-select: none;         
+  -webkit-user-drag: none;  
 }
 
 #status-bg {
@@ -373,6 +479,8 @@
   top: 10px;
   left: 10px;
   width: 90px;
+
+  display: none; /*for now*/
 }
 
 #profile {
@@ -440,6 +548,12 @@
 
 .pfp {
   border-radius: 10px;
+
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;    
+  user-select: none;         
+  -webkit-user-drag: none;   
 }
 
 #normal-pfp {
@@ -463,6 +577,17 @@
   color: var(--sub-2);
 }
 
+#emailme {
+  font-size: 1.5rem;
+  color: var(--red);
+}
+
+#changetheme {
+  font-size: 1.5rem;
+  color: var(--overlay);
+  cursor:default;
+}
+
 #socials-content-small {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
@@ -471,6 +596,7 @@
   width: 100%;
   height: 60px;
   gap: 5px;
+  justify-content: space-between;
 }
 
 #music {
@@ -538,6 +664,12 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 136px;
+
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;    
+  user-select: none;         
+  -webkit-user-drag: none;
 }
 
 #cover-section {

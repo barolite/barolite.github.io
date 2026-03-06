@@ -77,36 +77,35 @@
                 </div>
             </div>   
             <div class="tab tab3">
+                <div id="leftbutton" onclick="scrollCarousel(-1)"><i class="fa-solid fa-chevron-left"></i></div>
+                <!-- <div id="social-cat-wrapper">
+                    <div class="social-cat" style="grid-area: mystuff; border-color: var(--pink);">my stuff</div>
+                    <div class="social-cat" style="grid-area: stats; border-color: var(--cyan-alt);">stats</div>
+                    <div class="social-cat" style="grid-area: games; border-color: var(--peri);">games</div>
+                </div> -->
                 <div id="socials-content">
-                    <a id="email" class="social-button" target="_blank" href='mailto:barolites@gmail.com' style="grid-area: email; color: var(--text);">
-                        <i class="fa-solid fa-envelope icon"></i><span class="vanish">email</span></a>
+                    <a id="discord" class="social-button" target="_blank" href='https://discord.com/users/707094670588641400/' style="grid-area: roblox; color: var(--text);">
+                        <i class="fa-brands fa-discord icon"></i><span class="vanish">discord</span></a>
                     <a id="github" class="social-button" target="_blank" href='https://github.com/barolite' style="grid-area: github; color: var(--text);">
                         <i class="fa-brands fa-github icon"></i><span class="vanish">github</span></a>
                     <a id="bandcamp" class="social-button" target="_blank" href='https://barolite.bandcamp.com' style="grid-area: bandcamp; color: var(--text);">
                         <i class="fa-brands fa-bandcamp icon"></i><span class="vanish">bandcamp</span></a>
-                    <a id="youtube" class="social-button" target="_blank" href='https://www.youtube.com/@barolite' style="grid-area: youtube; color: var(--text);">
-                        <i class="fa-brands fa-youtube icon"></i><span class="vanish">youtube</span></a>
-                    <a id="spotify" class="social-button" target="_blank" href='https://github.com/barolite' style="grid-area: spotify; color: var(--text);">
-                        <i class="fa-brands fa-spotify icon"></i><span class="vanish">spotify</span></a>
-                    <a id="lastfm" class="social-button" target="_blank" href='https://last.fm/user/barolite' style="grid-area: lastfm; color: var(--text);">
-                        <i class="fa-brands fa-lastfm icon"></i><span class="vanish">last.fm</span></a>
                     <a id="twitter" class="social-button" target="_blank" href='https://x.com/barolite' style="grid-area: twitter; color: var(--text);">
                         <i class="fa-brands fa-x-twitter icon"></i><span class="vanish">twitter</span></a>
+                    <a id="lastfm" class="social-button" target="_blank" href='https://last.fm/user/barolite' style="grid-area: lastfm; color: var(--text);">
+                        <i class="fa-brands fa-lastfm icon"></i><span class="vanish">last.fm</span></a>
                     <a id="letterboxd" class="social-button" target="_blank" href='https://letterboxd.com/barolite' style="grid-area: letterboxd; color: var(--text);">
                         <i class="fa-brands fa-letterboxd icon"></i><span class="vanish">letterboxd</span></a>
                     <a id="rym" class="social-button" target="_blank" href='https://rateyourmusic.com/~barolite' style="grid-area: rym; color: var(--text);">
                         <i class="fa-solid fa-record-vinyl icon"></i><span class="vanish">rateyourmusic</span></a>
-                    <a id="steam" class="social-button" target="_blank" href='https://steamcommunity.com/id/barolite/' style="grid-area: steam; color: var(--text);">
-                        <i class="fa-brands fa-steam icon"></i><span class="vanish">steam</span></a>
-                    <a id="namemc" class="social-button" target="_blank" href='https://namemc.com/profile/barolite.1' style="grid-area: namemc; color: var(--text);">
-                        <i class="fa-solid fa-cube icon"></i><span class="vanish">namemc</span></a>
                     <a id="roblox" class="social-button" target="_blank" href='https://www.roblox.com/users/2243315847/profile' style="grid-area: roblox; color: var(--text);">
                         <i class="fa-solid fa-gamepad icon"></i><span class="vanish">roblox</span></a>
-                    <div class="social-cat" style="grid-area: mystuff; border-color: var(--pink);">my stuff</div>
-                    <div class="social-cat" style="grid-area: stats; border-color: var(--cyan-alt);">stats</div>
-                    <div class="social-cat" style="grid-area: games; border-color: var(--peri);">games</div>
-                    <div class="social-cat" style="grid-area: misc; border-color: var(--blue);">misc</div>
-                        
+                    <a id="steam" class="social-button" target="_blank" href='https://steamcommunity.com/id/barolite/' style="grid-area: steam; color: var(--text);">
+                        <i class="fa-brands fa-steam icon"></i><span class="vanish">steam</span></a>
+                </div>
+                <div id="rightbutton" onclick="scrollCarousel(1)"><i class="fa-solid fa-chevron-right"></i></div>
+                <div id="bigmarquee">
+                    <div id="bigmarquee2">we're all lost in this world, walking blindly in the dark, colliding with each other. our lives are a series of random encounters that shape our course.</div>
                 </div>
             </div>
             <div class="tab tab4">
@@ -158,7 +157,7 @@
         <div class="container" id="profile">
             <div id="pfp-wrapper">
                 <img class="pfp" id="normal-pfp" src="img/pfp.png" alt="profile picture" draggable="false" style="grid-area: pfpp;">
-                <div class="credits" style="grid-area: credits;">pfp by <a href='https://x.com/EeriesVoid'>EeriesVoid</a></div>
+                <div class="credits" style="grid-area: credits;">pfp by <span style="color: white;">squidiott</span></div>
                 <div style="grid-area: myname;">
                     <div class="bold" style="font-size: 1.8em; text-align: center;">barolite</div>
                     <div class="gray" style="text-align: center;">he/him</div>
@@ -169,11 +168,13 @@
                 <p>- 18 year old from california</p>
                 <p>- hobbies include music production, coding, some videogames, and linux <span id="linuxricing" style="color: var(--yellow); text-decoration: underline; cursor: pointer;">ricing</span><span class="hide">ricing (technology) -  customizing a desktop's look, feel and functionality</span></p>
                 <p>-  i make music, check it out on <a style="color:var(--sky);" target="_blank" href="https://barolite.bandcamp.com">bandcamp</a></p>
-                <p>- i am currently learning ambient music and how to draw (maybe!)</p>
-                <p>- talk to me about CSS, night in the woods, IDM, <a style="color:rgb(var(--snow));" target="_blank" href="https://homph.snowme.ws/">snow leopards</a>, movies, and graphic design</p>            </div>
+                <p>- i am currently learning ambient music and graphic design</p>
+                <p>- talk to me about CSS, night in the woods, IDM, <a style="color:rgb(var(--snow));" target="_blank" href="https://homph.snowme.ws/">snow leopards</a>, movies, and album recs</p>
+            </div>
             <div id="socials-content-small">
-                <a id="discord" class="social-button" target="_blank" href='https://discord.com/users/707094670588641400' style="grid-area: discord; color: var(--text);">
-                    <i class="fa-brands fa-discord icon"></i></a>
+                <a id="emailme" href='mailto:barolites@gmail.com'">email me</a>
+                <div id="changetheme" onclick="location.href='dog'">change theme</div>
+
             </div>
         </div>
         <div class="container" id="stats" onclick="location.href='https://last.fm/user/barolite'">
@@ -186,6 +187,16 @@
     <script src="scripts/discord.js"></script>
     <script type="module" src="scripts/mc2.js"></script>
     <script src="scripts/music.js"></script>
-
+    <script>
+    function scrollCarousel(direction) {
+    const carousel = document.getElementById('socials-content');
+    const scrollAmount = carousel.offsetWidth * 1; // Match the item width logic
+  
+    carousel.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+    }
+    </script>
 </body>
 </html>
