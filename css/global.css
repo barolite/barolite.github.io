@@ -6,23 +6,14 @@
   border-radius: 0px;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   /* background: url('../img/losangeles.avif') no-repeat center center / cover; */
   background-color: var(--black);
-  padding: 15px 0 15px 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 100dvh;
-  overflow: auto;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -31,7 +22,6 @@ body {
   color: var(--text);
   border: solid 1px var(--surface);
   padding: 10px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 
   position: relative;
@@ -55,8 +45,14 @@ body {
   display: none;
 }
 
+.text {
+  font-size: 2rem;
+}
 .bold {
   font-weight: bold;
+}
+.center {
+  text-align: center;
 }
 .large {
   font-size: 1.8rem;
