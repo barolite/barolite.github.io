@@ -572,7 +572,7 @@
   font-style: italic;
 }
 
-#linuxricing:hover + .hide {
+.ricing:hover .hide {
   display: block;
   color: var(--sub-2);
 }
