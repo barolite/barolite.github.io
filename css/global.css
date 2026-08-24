@@ -6,15 +6,18 @@
   border-radius: 0px;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
 
 body {
   /* background: url('../img/losangeles.avif') no-repeat center center / cover; */
   background-color: var(--black);
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  min-height: 100dvh;
+  padding: 15px 0 15px 0;
+  margin: 0;
 }
 
 .container {
